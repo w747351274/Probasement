@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BA054F1196B7B8900B7E082 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA054F0196B7B8900B7E082 /* Foundation.framework */; };
+		8BA054F6196B7B8A00B7E082 /* ProService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BA054F5196B7B8A00B7E082 /* ProService.h */; };
+		8BA054F8196B7B8A00B7E082 /* ProService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA054F7196B7B8A00B7E082 /* ProService.m */; };
+		8BA054FF196B7B8A00B7E082 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA054FE196B7B8A00B7E082 /* XCTest.framework */; };
+		8BA05500196B7B8A00B7E082 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA054F0196B7B8900B7E082 /* Foundation.framework */; };
+		8BA05502196B7B8A00B7E082 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05501196B7B8A00B7E082 /* UIKit.framework */; };
+		8BA05505196B7B8A00B7E082 /* libProService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA054ED196B7B8900B7E082 /* libProService.a */; };
+		8BA0550B196B7B8A00B7E082 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BA05509196B7B8A00B7E082 /* InfoPlist.strings */; };
+		8BA0550D196B7B8A00B7E082 /* ProServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA0550C196B7B8A00B7E082 /* ProServiceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BA05503196B7B8A00B7E082 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BA054E5196B7B8900B7E082 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BA054EC196B7B8900B7E082;
+			remoteInfo = ProService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BA054EB196B7B8900B7E082 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				8BA054F6196B7B8A00B7E082 /* ProService.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8BA054ED196B7B8900B7E082 /* libProService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProService.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA054F0196B7B8900B7E082 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8BA054F4196B7B8900B7E082 /* ProService-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProService-Prefix.pch"; sourceTree = "<group>"; };
+		8BA054F5196B7B8A00B7E082 /* ProService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProService.h; sourceTree = "<group>"; };
+		8BA054F7196B7B8A00B7E082 /* ProService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProService.m; sourceTree = "<group>"; };
+		8BA054FD196B7B8A00B7E082 /* ProServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA054FE196B7B8A00B7E082 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8BA05501196B7B8A00B7E082 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8BA05508196B7B8A00B7E082 /* ProServiceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProServiceTests-Info.plist"; sourceTree = "<group>"; };
+		8BA0550A196B7B8A00B7E082 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8BA0550C196B7B8A00B7E082 /* ProServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProServiceTests.m; sourceTree = "<group>"; };
+		8BA05516196B7BDC00B7E082 /* ProHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BA054EA196B7B8900B7E082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA054F1196B7B8900B7E082 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA054FA196B7B8A00B7E082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA054FF196B7B8A00B7E082 /* XCTest.framework in Frameworks */,
+				8BA05502196B7B8A00B7E082 /* UIKit.framework in Frameworks */,
+				8BA05500196B7B8A00B7E082 /* Foundation.framework in Frameworks */,
+				8BA05505196B7B8A00B7E082 /* libProService.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BA054E4196B7B8900B7E082 = {
+			isa = PBXGroup;
+			children = (
+				8BA05517196B7C4E00B7E082 /* Category */,
+				8BA054F2196B7B8900B7E082 /* ProService */,
+				8BA05506196B7B8A00B7E082 /* ProServiceTests */,
+				8BA054EF196B7B8900B7E082 /* Frameworks */,
+				8BA054EE196B7B8900B7E082 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BA054EE196B7B8900B7E082 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BA054ED196B7B8900B7E082 /* libProService.a */,
+				8BA054FD196B7B8A00B7E082 /* ProServiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BA054EF196B7B8900B7E082 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BA054F0196B7B8900B7E082 /* Foundation.framework */,
+				8BA054FE196B7B8A00B7E082 /* XCTest.framework */,
+				8BA05501196B7B8A00B7E082 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BA054F2196B7B8900B7E082 /* ProService */ = {
+			isa = PBXGroup;
+			children = (
+				8BA054F5196B7B8A00B7E082 /* ProService.h */,
+				8BA054F7196B7B8A00B7E082 /* ProService.m */,
+				8BA054F3196B7B8900B7E082 /* Supporting Files */,
+				8BA05516196B7BDC00B7E082 /* ProHeader.h */,
+			);
+			path = ProService;
+			sourceTree = "<group>";
+		};
+		8BA054F3196B7B8900B7E082 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BA054F4196B7B8900B7E082 /* ProService-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BA05506196B7B8A00B7E082 /* ProServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BA0550C196B7B8A00B7E082 /* ProServiceTests.m */,
+				8BA05507196B7B8A00B7E082 /* Supporting Files */,
+			);
+			path = ProServiceTests;
+			sourceTree = "<group>";
+		};
+		8BA05507196B7B8A00B7E082 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BA05508196B7B8A00B7E082 /* ProServiceTests-Info.plist */,
+				8BA05509196B7B8A00B7E082 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BA05517196B7C4E00B7E082 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BA054EC196B7B8900B7E082 /* ProService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BA05510196B7B8A00B7E082 /* Build configuration list for PBXNativeTarget "ProService" */;
+			buildPhases = (
+				8BA054E9196B7B8900B7E082 /* Sources */,
+				8BA054EA196B7B8900B7E082 /* Frameworks */,
+				8BA054EB196B7B8900B7E082 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProService;
+			productName = ProService;
+			productReference = 8BA054ED196B7B8900B7E082 /* libProService.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8BA054FC196B7B8A00B7E082 /* ProServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BA05513196B7B8A00B7E082 /* Build configuration list for PBXNativeTarget "ProServiceTests" */;
+			buildPhases = (
+				8BA054F9196B7B8A00B7E082 /* Sources */,
+				8BA054FA196B7B8A00B7E082 /* Frameworks */,
+				8BA054FB196B7B8A00B7E082 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BA05504196B7B8A00B7E082 /* PBXTargetDependency */,
+			);
+			name = ProServiceTests;
+			productName = ProServiceTests;
+			productReference = 8BA054FD196B7B8A00B7E082 /* ProServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BA054E5196B7B8900B7E082 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = WangJiangLei;
+			};
+			buildConfigurationList = 8BA054E8196B7B8900B7E082 /* Build configuration list for PBXProject "ProService" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8BA054E4196B7B8900B7E082;
+			productRefGroup = 8BA054EE196B7B8900B7E082 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BA054EC196B7B8900B7E082 /* ProService */,
+				8BA054FC196B7B8A00B7E082 /* ProServiceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BA054FB196B7B8A00B7E082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA0550B196B7B8A00B7E082 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BA054E9196B7B8900B7E082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA054F8196B7B8A00B7E082 /* ProService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA054F9196B7B8A00B7E082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA0550D196B7B8A00B7E082 /* ProServiceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BA05504196B7B8A00B7E082 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BA054EC196B7B8900B7E082 /* ProService */;
+			targetProxy = 8BA05503196B7B8A00B7E082 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BA05509196B7B8A00B7E082 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BA0550A196B7B8A00B7E082 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BA0550E196B7B8A00B7E082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8BA0550F196B7B8A00B7E082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BA05511196B7B8A00B7E082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ProService.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProService/ProService-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8BA05512196B7B8A00B7E082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ProService.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProService/ProService-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8BA05514196B7B8A00B7E082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProService/ProService-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ProServiceTests/ProServiceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8BA05515196B7B8A00B7E082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProService/ProService-Prefix.pch";
+				INFOPLIST_FILE = "ProServiceTests/ProServiceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BA054E8196B7B8900B7E082 /* Build configuration list for PBXProject "ProService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA0550E196B7B8A00B7E082 /* Debug */,
+				8BA0550F196B7B8A00B7E082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BA05510196B7B8A00B7E082 /* Build configuration list for PBXNativeTarget "ProService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA05511196B7B8A00B7E082 /* Debug */,
+				8BA05512196B7B8A00B7E082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8BA05513196B7B8A00B7E082 /* Build configuration list for PBXNativeTarget "ProServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA05514196B7B8A00B7E082 /* Debug */,
+				8BA05515196B7B8A00B7E082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BA054E5196B7B8900B7E082 /* Project object */;
+}
