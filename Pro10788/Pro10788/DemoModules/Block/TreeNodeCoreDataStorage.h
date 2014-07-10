@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 江磊. All rights reserved.
 //
 
-#import "CoreDataStorage.h"
-#import "CoreDataStorageProtected.h"
 #import "TreeNodeCoreDataStorageObject.h"
 
 @interface TreeNodeCoreDataStorage : CoreDataStorage{

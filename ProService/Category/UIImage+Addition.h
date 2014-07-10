@@ -2,11 +2,12 @@
 //  UIImage+WSK.h
 //  CorePlotDemo
 //
-//  Created by 何 振东 on 12-9-26.
+//  Created by on 12-9-26.
 //  Copyright (c) 2012年 开趣. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface UIImage (Addition1)
 
@@ -72,4 +73,19 @@
  *画出纯色的UIImage
 **/
 -(UIImage *)pureColor:(UIColor *)color withSize:(CGSize)size;
+
+//视频截取相关
++(UIImage *)imageWithVideo:(NSString *)videoPath atTime:(NSTimeInterval)time;
+
+//获取视频时长
++(NSInteger)durationWithVideo:(NSString *)videoPath;
+
+
+//确定图片方向
++(UIImage *)imageWithFixedOrientation:(UIImage *)image;
+
+
+//图片加圆角
++(UIImage *)imageWithImage:(UIImage*)image cornerRadius:(CGFloat)cornerRadius;
+
 @end

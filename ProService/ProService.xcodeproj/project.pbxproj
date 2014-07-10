@@ -33,6 +33,16 @@
 		8B0AFBCC196E692000D6A575 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFBB1196E692000D6A575 /* UIView+AutoLayout.m */; };
 		8B0AFBCD196E692000D6A575 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFBB3196E692000D6A575 /* UIView+Frame.m */; };
 		8B0AFBCE196E692000D6A575 /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFBB5196E692000D6A575 /* UIView+Layer.m */; };
+		8B0AFC0C196E769800D6A575 /* ProHeader.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8BA05516196B7BDC00B7E082 /* ProHeader.h */; };
+		8B0AFC19196E778700D6A575 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFC10196E778700D6A575 /* BaseService.m */; };
+		8B0AFC1A196E778700D6A575 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFC12196E778700D6A575 /* BaseView.m */; };
+		8B0AFC1B196E778700D6A575 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFC14196E778700D6A575 /* BaseViewController.m */; };
+		8B0AFC1C196E778700D6A575 /* CoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFC17196E778700D6A575 /* CoreDataStorage.m */; };
+		8B0AFC25196E78B200D6A575 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFC20196E78B200D6A575 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8B0AFC26196E78B200D6A575 /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFC22196E78B200D6A575 /* OMGToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8B0AFC27196E78B200D6A575 /* WaitingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFC24196E78B200D6A575 /* WaitingHud.m */; };
+		8B97EBFF196E8EBE0001BA0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B97EBFE196E8EBE0001BA0E /* CoreGraphics.framework */; };
+		8B97EC01196E96990001BA0E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B97EC00196E96990001BA0E /* AVFoundation.framework */; };
 		8BA054F1196B7B8900B7E082 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA054F0196B7B8900B7E082 /* Foundation.framework */; };
 		8BA054F6196B7B8A00B7E082 /* ProService.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8BA054F5196B7B8A00B7E082 /* ProService.h */; };
 		8BA054F8196B7B8A00B7E082 /* ProService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA054F7196B7B8A00B7E082 /* ProService.m */; };
@@ -61,6 +71,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				8B0AFC0C196E769800D6A575 /* ProHeader.h in Copy Files */,
 				8B0AF7C4196E234400D6A575 /* Category.h in Copy Files */,
 				8BA054F6196B7B8A00B7E082 /* ProService.h in Copy Files */,
 			);
@@ -121,6 +132,26 @@
 		8B0AFBB3196E692000D6A575 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		8B0AFBB4196E692000D6A575 /* UIView+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
 		8B0AFBB5196E692000D6A575 /* UIView+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layer.m"; sourceTree = "<group>"; };
+		8B0AFBD4196E6D2F00D6A575 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		8B0AFBD5196E6D2F00D6A575 /* MacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDefine.h; sourceTree = "<group>"; };
+		8B0AFC0E196E778700D6A575 /* BaseProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseProtocal.h; sourceTree = "<group>"; };
+		8B0AFC0F196E778700D6A575 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		8B0AFC10196E778700D6A575 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		8B0AFC11196E778700D6A575 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		8B0AFC12196E778700D6A575 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		8B0AFC13196E778700D6A575 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8B0AFC14196E778700D6A575 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8B0AFC16196E778700D6A575 /* CoreDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStorage.h; sourceTree = "<group>"; };
+		8B0AFC17196E778700D6A575 /* CoreDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStorage.m; sourceTree = "<group>"; };
+		8B0AFC18196E778700D6A575 /* CoreDataStorageProtected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStorageProtected.h; sourceTree = "<group>"; };
+		8B0AFC1F196E78B200D6A575 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8B0AFC20196E78B200D6A575 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8B0AFC21196E78B200D6A575 /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
+		8B0AFC22196E78B200D6A575 /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
+		8B0AFC23196E78B200D6A575 /* WaitingHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingHud.h; sourceTree = "<group>"; };
+		8B0AFC24196E78B200D6A575 /* WaitingHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingHud.m; sourceTree = "<group>"; };
+		8B97EBFE196E8EBE0001BA0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B97EC00196E96990001BA0E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8BA054ED196B7B8900B7E082 /* libProService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProService.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA054F0196B7B8900B7E082 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8BA054F4196B7B8900B7E082 /* ProService-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProService-Prefix.pch"; sourceTree = "<group>"; };
@@ -140,6 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B97EC01196E96990001BA0E /* AVFoundation.framework in Frameworks */,
+				8B97EBFF196E8EBE0001BA0E /* CoreGraphics.framework in Frameworks */,
 				8BA054F1196B7B8900B7E082 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,9 +191,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B0AFBD3196E6D2F00D6A575 /* AppDefine */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AFBD4196E6D2F00D6A575 /* AppConstants.h */,
+				8B0AFBD5196E6D2F00D6A575 /* MacroDefine.h */,
+			);
+			path = AppDefine;
+			sourceTree = "<group>";
+		};
+		8B0AFC0D196E778700D6A575 /* Super */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AFC0E196E778700D6A575 /* BaseProtocal.h */,
+				8B0AFC0F196E778700D6A575 /* BaseService.h */,
+				8B0AFC10196E778700D6A575 /* BaseService.m */,
+				8B0AFC11196E778700D6A575 /* BaseView.h */,
+				8B0AFC12196E778700D6A575 /* BaseView.m */,
+				8B0AFC13196E778700D6A575 /* BaseViewController.h */,
+				8B0AFC14196E778700D6A575 /* BaseViewController.m */,
+				8B0AFC15196E778700D6A575 /* CoreDataStorage */,
+			);
+			path = Super;
+			sourceTree = "<group>";
+		};
+		8B0AFC15196E778700D6A575 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AFC16196E778700D6A575 /* CoreDataStorage.h */,
+				8B0AFC17196E778700D6A575 /* CoreDataStorage.m */,
+				8B0AFC18196E778700D6A575 /* CoreDataStorageProtected.h */,
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		8B0AFC1D196E78B200D6A575 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AFC1E196E78B200D6A575 /* MBProgressHUD */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		8B0AFC1E196E78B200D6A575 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AFC1F196E78B200D6A575 /* MBProgressHUD.h */,
+				8B0AFC20196E78B200D6A575 /* MBProgressHUD.m */,
+				8B0AFC21196E78B200D6A575 /* OMGToast.h */,
+				8B0AFC22196E78B200D6A575 /* OMGToast.m */,
+				8B0AFC23196E78B200D6A575 /* WaitingHud.h */,
+				8B0AFC24196E78B200D6A575 /* WaitingHud.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		8BA054E4196B7B8900B7E082 = {
 			isa = PBXGroup;
 			children = (
+				8B0AFC1D196E78B200D6A575 /* Lib */,
+				8B0AFC0D196E778700D6A575 /* Super */,
 				8BA05517196B7C4E00B7E082 /* Category */,
 				8BA054F2196B7B8900B7E082 /* ProService */,
 				8BA05506196B7B8A00B7E082 /* ProServiceTests */,
@@ -181,6 +271,8 @@
 		8BA054EF196B7B8900B7E082 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B97EC00196E96990001BA0E /* AVFoundation.framework */,
+				8B97EBFE196E8EBE0001BA0E /* CoreGraphics.framework */,
 				8BA054F0196B7B8900B7E082 /* Foundation.framework */,
 				8BA054FE196B7B8A00B7E082 /* XCTest.framework */,
 				8BA05501196B7B8A00B7E082 /* UIKit.framework */,
@@ -191,6 +283,7 @@
 		8BA054F2196B7B8900B7E082 /* ProService */ = {
 			isa = PBXGroup;
 			children = (
+				8B0AFBD3196E6D2F00D6A575 /* AppDefine */,
 				8BA054F5196B7B8A00B7E082 /* ProService.h */,
 				8BA054F7196B7B8A00B7E082 /* ProService.m */,
 				8BA054F3196B7B8900B7E082 /* Supporting Files */,
@@ -384,8 +477,11 @@
 			files = (
 				8B0AFBC4196E692000D6A575 /* UIImageView+LBBlurredImage.m in Sources */,
 				8B0AFBC6196E692000D6A575 /* UINavigationController+Retro.m in Sources */,
+				8B0AFC1C196E778700D6A575 /* CoreDataStorage.m in Sources */,
+				8B0AFC19196E778700D6A575 /* BaseService.m in Sources */,
 				8B0AFBC8196E692000D6A575 /* UITextField+Addition.m in Sources */,
 				8B0AFBBE196E692000D6A575 /* UIBezierPath+Symbol.m in Sources */,
+				8B0AFC1B196E778700D6A575 /* BaseViewController.m in Sources */,
 				8B0AFBCC196E692000D6A575 /* UIView+AutoLayout.m in Sources */,
 				8B0AFBBC196E692000D6A575 /* NSString+Regular.m in Sources */,
 				8B0AFBB9196E692000D6A575 /* NSString+Addition.m in Sources */,
@@ -396,14 +492,18 @@
 				8B0AFBC3196E692000D6A575 /* UIImage+Addition.m in Sources */,
 				8B0AFBC9196E692000D6A575 /* UITextField+LimitLength.m in Sources */,
 				8B0AFBB8196E692000D6A575 /* NSFileManager+ Addition.m in Sources */,
+				8B0AFC27196E78B200D6A575 /* WaitingHud.m in Sources */,
 				8B0AFBB7196E692000D6A575 /* NSDate+Addition.m in Sources */,
 				8B0AFBCA196E692000D6A575 /* UIView+Addition.m in Sources */,
+				8B0AFC26196E78B200D6A575 /* OMGToast.m in Sources */,
 				8B0AFBC1196E692000D6A575 /* UIDevice+DeviceInfo.m in Sources */,
 				8B0AFBCD196E692000D6A575 /* UIView+Frame.m in Sources */,
 				8B0AFBBA196E692000D6A575 /* NSString+FilterEmoji.m in Sources */,
+				8B0AFC25196E78B200D6A575 /* MBProgressHUD.m in Sources */,
 				8B0AFBBB196E692000D6A575 /* NSString+MD5Addition.m in Sources */,
 				8BA054F8196B7B8A00B7E082 /* ProService.m in Sources */,
 				8B0AFBBD196E692000D6A575 /* UIAlertView+Addition.m in Sources */,
+				8B0AFC1A196E778700D6A575 /* BaseView.m in Sources */,
 				8B0AFBC0196E692000D6A575 /* UIColor+Addition.m in Sources */,
 				8B0AFBBF196E692000D6A575 /* UIButton+Addition.m in Sources */,
 				8B0AFBCE196E692000D6A575 /* UIView+Layer.m in Sources */,
@@ -472,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -503,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -13,11 +13,8 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import "AppConstants.h"
-    #import "MacroDefine.h"
-    #import "BaseViewController.h"
-    #import "BaseService.h"
-    #import "Category.h"
-    #import "BaseProtocal.h"
+
     #import "UIResourceTools.h"
+    #import <ProService/Category.h>
+    #import <ProService/ProHeader.h>
 #endif

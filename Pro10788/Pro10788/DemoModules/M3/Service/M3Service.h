@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 江磊. All rights reserved.
 //
 
-#import "BaseService.h"
 #import "HttpUtil.h"
 @protocol m3Protocal <BaseProtocal>
 

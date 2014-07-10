@@ -351,4 +351,213 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     
     return newImage;
 }
+
++ (UIImage*)imageWithVideo:(NSString *)videoPath atTime:(NSTimeInterval)time
+{
+    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
+    
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
+    
+    NSParameterAssert(asset);
+    
+    AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    assetImageGenerator.appliesPreferredTrackTransform = YES;
+    assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
+    
+    CGImageRef imageRef = NULL;
+    CFTimeInterval timeInterval = time;
+    NSError *error = nil;
+    imageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(timeInterval, 60) actualTime:NULL error:&error];
+    
+    if (!imageRef)
+        NSLog(@"ImageGenerationError %@", error);
+    
+    UIImage *image = imageRef ? [[UIImage alloc] initWithCGImage:imageRef] : nil;
+    
+    return image;
+}
+
++(UIImage *)imageWithImage:(UIImage *)image1 withImage:(UIImage *)image2
+{
+    CGSize size1 = image1.size;
+    CGSize size2 = image2.size;
+    
+    UIGraphicsBeginImageContext(size1);
+    
+    CGRect rect1 = CGRectMake(0, 0, size1.width, size1.height);
+    CGRect rect2 = CGRectMake((size1.width - size2.width)/2, (size1.height - size2.height)/2, size2.width, size2.height);
+    
+    [image1 drawInRect:rect1];
+    [image2 drawInRect:rect2];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
++(NSInteger)durationWithVideo:(NSString *)videoPath
+{
+    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
+    
+    NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO]
+                                                     forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+    
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:opts];
+    
+    NSParameterAssert(asset);
+    
+    NSInteger /*minute = 0,*/ second = 0;
+    
+    CMTimeValue duration = asset.duration.value;
+    CMTimeScale timescale = asset.duration.timescale;
+    
+    float sec = (float)duration / timescale;
+    
+    sec += 0.2; //误差
+    
+    second = (NSInteger)sec; // 获取视频总时长,单位秒
+    //DLog(@"movie duration : %d", second);
+    //    if (second >= 60) {
+    //        int index = second / 60;
+    //        minute = index;
+    //        second = second - index*60;
+    //    }
+    
+    return second;
+}
+
++(UIImage *)imageWithFixedOrientation:(UIImage *)image
+{
+    // No-op if the orientation is already correct
+    if (image.imageOrientation == UIImageOrientationUp) return image;
+    
+    // We need to calculate the proper transformation to make the image upright.
+    // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    switch (image.imageOrientation) {
+        case UIImageOrientationDown:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.width, image.size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+            
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+            
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, image.size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+        case UIImageOrientationUp:
+        case UIImageOrientationUpMirrored:
+            break;
+    }
+    
+    switch (image.imageOrientation) {
+        case UIImageOrientationUpMirrored:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+            
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        case UIImageOrientationUp:
+        case UIImageOrientationDown:
+        case UIImageOrientationLeft:
+        case UIImageOrientationRight:
+            break;
+    }
+    
+    // Now we draw the underlying CGImage into a new context, applying the transform
+    // calculated above.
+    CGContextRef ctx = CGBitmapContextCreate(NULL, image.size.width, image.size.height,
+                                             CGImageGetBitsPerComponent(image.CGImage), 0,
+                                             CGImageGetColorSpace(image.CGImage),
+                                             CGImageGetBitmapInfo(image.CGImage));
+    CGContextConcatCTM(ctx, transform);
+    switch (image.imageOrientation) {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            // Grr...
+            CGContextDrawImage(ctx, CGRectMake(0,0,image.size.height,image.size.width), image.CGImage);
+            break;
+            
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0,0,image.size.width,image.size.height), image.CGImage);
+            break;
+    }
+    
+    // And now we just create a new UIImage from the drawing context
+    CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+    UIImage *img = [UIImage imageWithCGImage:cgimg];
+    CGContextRelease(ctx);
+    CGImageRelease(cgimg);
+    return img;
+}
+
+
+static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWidth, float ovalHeight)
+{
+    float fw, fh;
+    if (ovalWidth == 0 || ovalHeight == 0) {
+        CGContextAddRect(context, rect);
+        return;
+    }
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
+    CGContextScaleCTM(context, ovalWidth, ovalHeight);
+    fw = CGRectGetWidth(rect) / ovalWidth;
+    fh = CGRectGetHeight(rect) / ovalHeight;
+    CGContextMoveToPoint(context, fw, fh/2);  // Start at lower right corner
+    CGContextAddArcToPoint(context, fw, fh, fw/2, fh, 1);  // Top right corner
+    CGContextAddArcToPoint(context, 0, fh, 0, fh/2, 1); // Top left corner
+    CGContextAddArcToPoint(context, 0, 0, fw/2, 0, 1); // Lower left corner
+    CGContextAddArcToPoint(context, fw, 0, fw, fh/2, 1); // Back to lower right
+    CGContextClosePath(context);
+    CGContextRestoreGState(context);
+}
+
++(UIImage *)imageWithImage:(UIImage*)image cornerRadius:(CGFloat)cornerRadius
+{
+    // the size of CGContextRef
+    int w = image.size.width;
+    int h = image.size.height;
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h,
+                                                 CGImageGetBitsPerComponent(image.CGImage), CGImageGetBytesPerRow(image.CGImage),
+                                                 CGImageGetColorSpace(image.CGImage),
+                                                 CGImageGetBitmapInfo(image.CGImage));
+    
+    //CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGRect rect = CGRectMake(0, 0, w, h);
+    CGContextBeginPath(context);
+    addRoundedRectToPath(context, rect, cornerRadius, cornerRadius);
+    CGContextClosePath(context);
+    CGContextClip(context);
+    CGContextDrawImage(context, CGRectMake(0, 0, w, h), image.CGImage);
+    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
+    UIImage *img = [UIImage imageWithCGImage:imageMasked];
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    CGImageRelease(imageMasked);
+    
+    return img;
+}
+
+
 @end

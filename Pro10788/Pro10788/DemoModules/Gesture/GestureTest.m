@@ -41,8 +41,7 @@
         [viewNum addSubview:viewImage];
     }];
     [self.view addSubview:viewNum];
-    NSString *str = [NSString strTest];
-    NSLog(@"%@",str);
+
     UIButton *headerButton = [SectionHeaderButton initWithFrame:CGRectMake(0, 150, CGRectGetWidth(self.view.bounds), 56) withTitle:@"ExpandOrCollapse" touchUpInsideBlock:^(SectionHeaderButtonStatus status) {
         NSLog(@"Got Expand");
     }];

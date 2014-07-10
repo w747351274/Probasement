@@ -6,11 +6,7 @@
 //  Copyright (c) 2014 江磊. All rights reserved.
 //
 
-#import "CoreDataStorage.h"
 #import "ContactCoreDataStorageObject.h"
-#import "CoreDataStorageProtected.h"
-
-
 @interface ContactCoreDataStorage : CoreDataStorage
 
 

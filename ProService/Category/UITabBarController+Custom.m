@@ -22,7 +22,7 @@
         NSAssert([[dic objectForKey:KImageNomal] isKindOfClass:[UIImage class]], @"必须给出图片");
         UIImage  *imageSelected = [dic objectForKey:KImageSelected];
         UIImage  *imageNomal = [dic objectForKey:KImageNomal];
-        if (IOS7_OR_LATER) {
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
             item.selectedImage = [imageSelected imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             item.image = [imageNomal imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             item.title = strTitle;

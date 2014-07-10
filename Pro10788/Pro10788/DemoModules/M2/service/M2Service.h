@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 江磊. All rights reserved.
 //
 
-#import "BaseService.h"
 #import "M2ViewController.h"
 #import "M2ViewProtocal.h"
 
