@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A6567F3-3450-4A7C-8DCF-3B3B468ABC97</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pro10788</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8EED0C5C-5F29-4066-B3AB-1D6C37D4A59E</key>
+		<string>https://bitbucket.org/wangjianglei/pro10788.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pro10788/Pro10788.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8EED0C5C-5F29-4066-B3AB-1D6C37D4A59E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/wangjianglei/pro10788.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8EED0C5C-5F29-4066-B3AB-1D6C37D4A59E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8EED0C5C-5F29-4066-B3AB-1D6C37D4A59E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pro10788</string>
+		</dict>
+	</array>
+</dict>
+</plist>

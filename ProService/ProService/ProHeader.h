@@ -9,6 +9,4 @@
 #ifndef ProService_ProHeader_h
 #define ProService_ProHeader_h
 
-
-
 #endif
