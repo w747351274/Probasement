@@ -439,6 +439,15 @@
 			path = CustomControl;
 			sourceTree = "<group>";
 		};
+		8B0AFB7B196E5E4B00D6A575 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AF7AD196E202000D6A575 /* ProService.xcodeproj */,
+				8BF7915A196A85CC00CBA948 /* SDWebImage.xcodeproj */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
 		8B42259418AB08C1002FD0C5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,15 +479,6 @@
 				8BD9FD2B19668A8E00B744A2 /* UncaughtExceptionHandler.m */,
 			);
 			path = UncaughtExceptionHandler;
-			sourceTree = "<group>";
-		};
-		8BD9FD2D19669B0D00B744A2 /* ThirdPart */ = {
-			isa = PBXGroup;
-			children = (
-				8B0AF7AD196E202000D6A575 /* ProService.xcodeproj */,
-				8BF7915A196A85CC00CBA948 /* SDWebImage.xcodeproj */,
-			);
-			path = ThirdPart;
 			sourceTree = "<group>";
 		};
 		8BE56C2618ADB43C007A1C30 /* MJRefresh */ = {
@@ -711,7 +711,7 @@
 		BAD346211895427F00275582 = {
 			isa = PBXGroup;
 			children = (
-				8BD9FD2D19669B0D00B744A2 /* ThirdPart */,
+				8B0AFB7B196E5E4B00D6A575 /* ThirdPart */,
 				8B42259418AB08C1002FD0C5 /* Resource */,
 				BAD3465E1895495500275582 /* Category */,
 				BAD3465F1895495500275582 /* Lib */,
