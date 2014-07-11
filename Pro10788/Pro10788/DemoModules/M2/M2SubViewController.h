@@ -5,8 +5,7 @@
 //  Created by WangJiangLei on 24/2/14.
 //  Copyright (c) 2014 江磊. All rights reserved.
 //
-
-#import "GCDMulticastDelegate.h"
+#import <ProService/GCDMulticastDelegate.h>
 #import "M2ViewProtocal.h"
 #import "M2Service2.h"
 #import "M2Service.h"

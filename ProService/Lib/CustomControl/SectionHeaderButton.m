@@ -43,11 +43,11 @@
     CGContextSetLineWidth(context, 0.3);
     switch (self.state) {
         case UIControlStateNormal:
-            CGContextSetFillColorWithColor(context, [UIResourceTools pureButtonColor].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
             break;
             
         case UIControlStateHighlighted:
-            CGContextSetFillColorWithColor(context, [UIResourceTools pureButtonColor].CGColor);
+            CGContextSetFillColorWithColor(context, [UIColor grayColor].CGColor);
             
             break;
         default:

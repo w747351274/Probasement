@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 江磊. All rights reserved.
 //
 
-#import "HttpUtil.h"
+
 @protocol m3Protocal <BaseProtocal>
 
 -(void)haveFun;

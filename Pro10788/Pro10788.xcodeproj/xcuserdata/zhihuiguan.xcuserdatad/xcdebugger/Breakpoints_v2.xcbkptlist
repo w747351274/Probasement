@@ -9,8 +9,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ThirdPart/SDWebImage-master/SDWebImage/UIImageView+WebCache.m"
-            timestampString = "426162531.89027"
+            filePath = "../SDWebImage/SDWebImage/UIImageView+WebCache.m"
+            timestampString = "426759141.870123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pro10788/Lib/UncaughtExceptionHandler/UncaughtExceptionHandler.m"
-            timestampString = "426389033.442158"
+            filePath = "../SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "426760286.995545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "-handleException:"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-initWithNamespace:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pro10788/Lib/UncaughtExceptionHandler/UncaughtExceptionHandler.m"
-            timestampString = "426389063.669182"
+            filePath = "../SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "426761279.97075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "-handleException:"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "-queryDiskCacheForKey:done:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pro10788/Lib/UncaughtExceptionHandler/UncaughtExceptionHandler.m"
-            timestampString = "426389886.660988"
+            filePath = "../SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "426761279.97075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "-handleException:"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "-queryDiskCacheForKey:done:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +73,91 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../TestService/TestService/cateLog/NSString+custom.m"
-            timestampString = "426407023.922664"
+            filePath = "../SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "426761279.97075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "+getTextStr"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
+            landmarkName = "-queryDiskCacheForKey:done:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "426760852.610634"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-dealloc"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "426761257.894519"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "-queryDiskCacheForKey:done:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SDImageCache queryDiskCacheForKey:done:]"
+                  moduleName = "Pro10788"
+                  urlString = "file:///Users/zhihuiguan/Documents/ProBasement/SDWebImage/SDWebImage/SDImageCache.m"
+                  timestampString = "426761324.403737"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "284"
+                  endingLineNumber = "284"
+                  offsetFromSymbolStart = "270">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[SDImageCache queryDiskCacheForKey:done:]_block_invoke"
+                  moduleName = "Pro10788"
+                  urlString = "file:///Users/zhihuiguan/Documents/ProBasement/SDWebImage/SDWebImage/SDImageCache.m"
+                  timestampString = "426761324.403935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "284"
+                  endingLineNumber = "284"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../SDWebImage/SDWebImage/SDImageCache.m"
+            timestampString = "426761281.799283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "-queryDiskCacheForKey:done:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

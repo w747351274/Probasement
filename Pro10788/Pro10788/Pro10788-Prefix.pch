@@ -14,7 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
-    #import "UIResourceTools.h"
     #import <ProService/Category.h>
     #import <ProService/ProHeader.h>
+    #import <ProService/Utility.h>
 #endif

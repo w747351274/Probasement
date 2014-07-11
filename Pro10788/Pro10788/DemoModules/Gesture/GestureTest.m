@@ -8,7 +8,7 @@
 
 #import "GestureTest.h"
 #import <ProService/Category.h>
-#import "SectionHeaderButton.h"
+#import <ProService/SectionHeaderButton.h>
 
 @interface GestureTest()
 @end

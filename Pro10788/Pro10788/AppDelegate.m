@@ -13,7 +13,7 @@
 #import "GestureTest.h"
 #import "BlockTestViewController.h"
 #import "DrawViewController.h"
-#import "UncaughtExceptionHandler.h"
+#import <ProService/UncaughtExceptionHandler.h>
 
 @implementation AppDelegate
 

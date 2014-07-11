@@ -60,6 +60,7 @@
     [imgCell sd_setImageWithURL:url placeholderImage:UIResourceBundleImage(@"sanji") completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         [imgCell sizeToFit];
     }];
+
     [imgCell setFrame:CGRectMake(10, 3, 36, 36)];
     [self.view addSubview:imgCell];
     

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MJRefresh.h"
+#import <ProService/MJRefresh.h>
 #import <CoreData/NSFetchedResultsController.h>
 
 @interface M2ViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,MJRefreshBaseViewDelegate,NSFetchedResultsControllerDelegate>{

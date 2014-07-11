@@ -63,7 +63,7 @@ BOOL ImageDataHasPNGPreffix(NSData *data) {
 
         // Create IO serial queue
         _ioQueue = dispatch_queue_create("com.hackemist.SDWebImageCache", DISPATCH_QUEUE_SERIAL);
-
+        
         // Init default values
         _maxCacheAge = kDefaultCacheMaxCacheAge;
 
@@ -280,6 +280,12 @@ BOOL ImageDataHasPNGPreffix(NSData *data) {
         doneBlock(image, SDImageCacheTypeMemory);
         return nil;
     }
+    
+    dispatch_sync(self.ioQueue, ^{
+        
+        NSLog(@"%@", self.ioQueue);
+    
+    });
 
     NSOperation *operation = [NSOperation new];
     dispatch_async(self.ioQueue, ^{
