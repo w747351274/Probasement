@@ -11,6 +11,7 @@
 #import "FillWordColor.h"
 #import "ShapeView.h"
 #import "BerzierTest.h"
+#import <ProService/BaseViewController.h>
 typedef enum{
     bg1 = 1<<0,
     bg2 = 2<<0,

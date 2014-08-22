@@ -17,11 +17,18 @@ This README would normally document whatever steps are necessary to get your app
 * How to run tests
 * Deployment instructions
 
-### Contribution guidelines ###
+### 可以引入的类 ###
+    #import <ProService/BaseViewController.h>
+    #import <ProService/Category.h>
+    #import <ProService/ProHeader.h>
+    #import <ProService/Utility.h>
+    
+    #import <ProService/BaseViewController.h>
+    #import <ProService/BaseService.h>
+    #import <ProService/BaseProtocal.h>
+    #import <ProService/CoreDataStorage.h>
+    #import <ProService/CoreDataStorageProtected.h>
 
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
 

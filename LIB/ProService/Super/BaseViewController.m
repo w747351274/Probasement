@@ -116,19 +116,6 @@
     hud = nil;
 }
 
-- (void)showBackArrowBtn:(BOOL)showit
-{
-    if (showit){
-        if (self.navigationItem.leftBarButtonItem == nil) {
-            
-        }
-    }else{
-        self.navigationItem.leftBarButtonItem = nil;
-    }
-}
-
-
-
 - (void)addKeyboardNotification
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -217,30 +204,4 @@
 {
     [self.view endEditing:YES];
 }
-
-#pragma mark - 屏幕旋转相关
-/** 屏高 */
-- (CGFloat)screenWidth
-{
-    CGFloat size = [self isPortraitOrientation] ? 768 : 1024;
-    return size;
-}
-
-/** 屏宽 */
-- (CGFloat)screenHeight{
-    CGFloat size = [self isPortraitOrientation] ? 1024 : 768;
-    return size;
-}
-
-- (BOOL)isPortraitOrientation
-{
-    return UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]);
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    [self updateSubviews];
-}
-
-- (void)updateSubviews{}
 @end
