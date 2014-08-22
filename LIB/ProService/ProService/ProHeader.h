@@ -10,9 +10,6 @@
 #define ProService_ProHeader_h
 #import "AppConstants.h"
 #import "MacroDefine.h"
-#import "BaseViewController.h"
-#import "BaseService.h"
-#import "BaseProtocal.h"
 #import "CoreDataStorage.h"
 #import "CoreDataStorageProtected.h"
 #endif

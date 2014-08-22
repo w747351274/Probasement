@@ -13,7 +13,7 @@
 /** 判断运行环境是否是iPad */
 #define IS_PAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
-// Frame的快捷操作
+// Frame的快捷操作 爱用不用
 CG_INLINE CGFloat V_X(UIView *view){ return view.frame.origin.x;}//等同于CGRectGetMaxX(view.frame)
 CG_INLINE CGFloat V_Y(UIView *view){ return view.frame.origin.y;}//等同于CGRectGetMaxY(view.frame)
 CG_INLINE CGFloat V_W(UIView *view){ return view.frame.size.width;} //等同于CGRectGetWidth(view.frame)

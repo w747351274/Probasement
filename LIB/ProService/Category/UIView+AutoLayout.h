@@ -35,4 +35,14 @@
  水平位于指定控件的右方，距离是apple定义的系统距离
  */
 -(void)layoutHorizontalNextTo:(id)controller;
+/*
+ 水平位于指定控件的右方，距离是apple定义的系统距离
+ */
+-(void)layoutHorizontalNextTo:(id)controller ofSize:(CGSize)size;
+/*
+ 设置view在父类的view的左端
+ @pram size 控件的大小，若设置为零，则为系统高宽
+ */
+
+-(void)layoutLeftInSuperwithSize:(CGSize )size;
 @end

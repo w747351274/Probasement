@@ -10,11 +10,15 @@
 
 @implementation BaseView
 
+- (void)initViews{
+
+}
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self initViews];
     }
     return self;
 }

@@ -9,6 +9,7 @@
 #import "UILabel+AgileCreate.h"
 
 @implementation UILabel (AgileCreate)
+
 +(UILabel *)labelWithContent:(NSString *)str{
     UILabel *label = [[UILabel alloc]init];
     [label setText:str];

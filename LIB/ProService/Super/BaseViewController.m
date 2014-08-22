@@ -18,9 +18,6 @@
 // 初始化共通设置,比如背景图,导航栏风格等
 - (void)initViews
 {
-    // 大的背景图
-    if (mSystemVersion.floatValue >= 7) {
-    }
     [self addKeyboardNotification];
     tapRecognizer = [[UITapGestureRecognizer alloc] init];
     tapRecognizer.delegate = self;

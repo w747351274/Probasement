@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol BaseProtocal <NSObject>
+@protocol BaseProtocol <NSObject>
 @optional
 -(void)message;
 

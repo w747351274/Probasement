@@ -16,16 +16,19 @@ This README would normally document whatever steps are necessary to get your app
 * Database configuration
 * How to run tests
 * Deployment instructions
-
+should add mark
+other link flag -ObjC
 ### 可以引入的类 ###
-    #import <ProService/BaseViewController.h>
+    //常用分类
     #import <ProService/Category.h>
+    //常用宏定义
     #import <ProService/ProHeader.h>
+    //工具类
     #import <ProService/Utility.h>
     
     #import <ProService/BaseViewController.h>
     #import <ProService/BaseService.h>
-    #import <ProService/BaseProtocal.h>
+    #import <ProService/BaseProtocol.h>
     #import <ProService/CoreDataStorage.h>
     #import <ProService/CoreDataStorageProtected.h>
 

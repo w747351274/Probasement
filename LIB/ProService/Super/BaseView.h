@@ -12,7 +12,7 @@
 @interface BaseView : UIView{
     MBProgressHUD *hud;
 }
-
+- (void)initViews;
 - (void)showHttpWaiting;
 - (void)showWaiting:(NSString *)text;
 - (void)showWaiting:(NSString *)text withView:(UIView *)view;
