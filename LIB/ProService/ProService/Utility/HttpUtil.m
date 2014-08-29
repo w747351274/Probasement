@@ -101,8 +101,8 @@ static HttpUtil * _instance = nil;
     
     [request setCompletionBlock:^{
         NSData * respData = _request.responseData;
-#if DEBUG
         __block NSString * respString = [[NSString alloc] initWithData:respData encoding:NSUTF8StringEncoding];
+#if DEBUG
         NSLog(@"----------------------start-------------------------");
         NSLog(@"http - url => %@", _request.url);
         NSLog(@"http - response ==> %@", respString);

@@ -51,12 +51,13 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strCellId];
     }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"文章%d",indexPath.row];
+    NSString *strRowContent =  [[self.service plainDataSource][indexPath.row] objectForKey:@"description"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d.%@",indexPath.row+1,strRowContent];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-     NSString *path = [NSString pathFromFileNamed:[self.service plainDataSource][indexPath.row]] ;
+    NSString *fileName = [[self.service plainDataSource][indexPath.row] objectForKey:@"fileName"];
+     NSString *path = [NSString pathFromFileNamed:fileName] ;
     if ([self.delegate respondsToSelector:@selector(selectedPlainUrl:)]) {
         [self.delegate selectedPlainUrl:path];
     }
