@@ -7,7 +7,12 @@
 //
 
 #import <ProService/BaseViewController.h>
+#import "PlainListView.h"
+#import "PlainContentView.h"
 
-@interface PlainViewController : BaseViewController
+@interface PlainViewController : BaseViewController<PlainSelectedProtocol>{
+    PlainListView *plainListView;
+    PlainContentView *plainContentView;
+}
 
 @end

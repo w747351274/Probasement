@@ -7,5 +7,4 @@
 //
 
 #import "ApplicationTool.h"
-#import "UIResourceTools.h"
 #import "HttpUtil.h"

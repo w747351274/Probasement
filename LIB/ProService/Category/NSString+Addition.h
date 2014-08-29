@@ -21,5 +21,6 @@
 - (NSString *)URLEncodedString;
 - (NSString *)encodeStringWithUTF8;
 - (NSUInteger)byteLengthWithEncoding:(NSStringEncoding)encoding;
-
++ (NSString *)textFromTextFileNamed:(NSString *)filename;
++ (NSString *)pathFromFileNamed:(NSString *)filename;
 @end

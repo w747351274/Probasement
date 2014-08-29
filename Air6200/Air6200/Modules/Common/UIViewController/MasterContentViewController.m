@@ -7,15 +7,12 @@
 //
 
 #import "MasterContentViewController.h"
-#import "MenuView.h"
-#import "ListView.h"
-#import "ContentView.h"
+
 @interface MasterContentViewController ()
 
 @end
 //设置左边menu的宽度
 const CGFloat menuWidth = 60;
-const CGFloat listWidth = 370;
 
 @implementation MasterContentViewController
 
@@ -27,29 +24,38 @@ const CGFloat listWidth = 370;
     }
     return self;
 }
-
+-(id)initWithMenu:(NSArray *)arrMenu controller:(NSArray *)arrController{
+    
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        self.arrController = arrController;
+        self.arrMenu = arrMenu;
+    }
+    return self;
+}
 // 设定画面元素
 - (void)initViews{
-    UILabel *label = [UILabel labelWithContent:@"hello air6200"];
-    [self.view addSubview:label];
-    [label layoutTopInSuperwithSize:CGSizeZero];
 
-    MenuView *menuView = [[MenuView alloc]init];
+    menuView = [[MenuView alloc]initWithMenu:self.arrMenu];
+    menuView.menuDelegate = self;
     [self.view addSubview:menuView];
-    [menuView layoutLeftInSuperwithSize:CGSizeMake(menuWidth, 0)];
-
-    ListView *listView = [[ListView alloc]init];
-    [self.view addSubview:listView];
-    [listView layoutHorizontalNextTo:menuView ofSize:CGSizeMake(listWidth, 0)];
-    
-    ContentView *contentView = [[ContentView alloc]init];
-    [self.view addSubview:contentView];
-    [contentView layoutHorizontalNextTo:listView ofSize:CGSizeZero];
+    [menuView layoutLeftInSuperwithSize:CGSizeMake(menuWidth, menuWidth*[self.arrMenu count])];
+    [menuView  setSelectedIndex:0];
 }
 
-// 设定画面跳转关系
-- (void)configureAll{
+-(void)indexChanged:(NSUInteger)index{
     
+    NSAssert([self.arrMenu count] == [self.arrController count], @"menu and the controller should be equal");
+    if (contentView) {
+        [contentView removeFromSuperview];
+        contentView = nil;
+    }
+    UIViewController *controller = self.arrController[index];
+    contentView = controller.view;
+    [self.view addSubview:contentView];
+    [contentView layoutHorizontalNextTo:menuView ofSize:CGSizeZero];
+
 }
 
 - (void)viewDidLoad

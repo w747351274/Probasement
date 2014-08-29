@@ -11,7 +11,7 @@
 @implementation BaseView
 
 - (void)initViews{
-
+    
 }
 - (id)initWithFrame:(CGRect)frame
 {

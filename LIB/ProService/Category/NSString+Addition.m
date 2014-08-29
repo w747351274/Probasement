@@ -69,5 +69,18 @@
     const char *byte = [self cStringUsingEncoding:encoding];
     return strlen(byte);
 }
-
++ (NSString *)textFromTextFileNamed:(NSString *)filename
+{
+    NSString *name = [filename stringByDeletingPathExtension];
+    NSString *extension = [filename pathExtension];
+    
+    return [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:extension] encoding:NSUTF8StringEncoding error:nil];
+}
++ (NSString *)pathFromFileNamed:(NSString *)filename
+{
+    NSString *name = [filename stringByDeletingPathExtension];
+    NSString *extension = [filename pathExtension];
+    
+    return [[NSBundle mainBundle] pathForResource:name ofType:extension];
+}
 @end

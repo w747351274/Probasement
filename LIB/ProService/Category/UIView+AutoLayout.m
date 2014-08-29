@@ -20,24 +20,71 @@
     if (sizeH > 0) {
         KHConstraint = [NSString stringWithFormat:@"V:|-[self(==%f)]",sizeH];
     }else{
-        KHConstraint = @"V:|-[self]";
+        KHConstraint = @"V:|-[self(>=45)]";
     }
     if (sizeW > 0 ) {
-        KVContraint = [NSString stringWithFormat:@"H:|-[self(==%f)]-|",sizeW];
+        KVContraint = [NSString stringWithFormat:@"H:|-[self(==%f)]",sizeW];
     }else{
-        KVContraint = @"H:|-[self(>=50)]-|";
+        KVContraint = @"H:|-[self(>=45)]";
     }
- 
+    
     NSMutableArray *constraintArray  = [[NSMutableArray alloc]init];
     [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
-
+    
     [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVContraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
     [self.superview addConstraints:constraintArray];
 }
-
+-(void)layoutTopInSuperwithMarginSize:(CGSize )mSize{
+    
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSString *KHConstraint;
+    NSString *KVContraint;
+    CGFloat sizeH = mSize.height;
+    CGFloat sizeW = mSize.width;
+    if (sizeH > 0) {
+        KHConstraint = [NSString stringWithFormat:@"V:|-%f-[self(>=53)]",sizeH];
+    }else{
+        KHConstraint = @"V:|-[self]";
+    }
+    if (sizeW > 0 ) {
+        KVContraint = [NSString stringWithFormat:@"H:|-%f-[self]-%f-|",sizeW,sizeW];
+    }else{
+        KVContraint = @"H:|-[self]-|";
+    }
+    
+    NSMutableArray *constraintArray  = [[NSMutableArray alloc]init];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+    
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVContraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+    [self.superview addConstraints:constraintArray];
+}
+-(void)layoutBottomInSuperwithMarginSize:(CGSize )mSize{
+    
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSString *KHConstraint;
+    NSString *KVContraint;
+    CGFloat sizeH = mSize.height;
+    CGFloat sizeW = mSize.width;
+    if (sizeH > 0) {
+        KHConstraint = [NSString stringWithFormat:@"V:[self(>=53)]-%f-|",sizeH];
+    }else{
+        KHConstraint = @"V:|-[self]";
+    }
+    if (sizeW > 0 ) {
+        KVContraint = [NSString stringWithFormat:@"H:|-%f-[self]-%f-|",sizeW,sizeW];
+    }else{
+        KVContraint = @"H:|-[self]-|";
+    }
+    
+    NSMutableArray *constraintArray  = [[NSMutableArray alloc]init];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+    
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVContraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+    [self.superview addConstraints:constraintArray];
+}
 -(void)layoutFullInSuper{
     self.translatesAutoresizingMaskIntoConstraints = NO;
- 
+    
     NSMutableArray *viewConstraintArray  = [[NSMutableArray alloc]init];
     [viewConstraintArray addObject:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.superview attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0f]];
     [viewConstraintArray addObject:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.superview attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.0f]];
@@ -48,6 +95,7 @@
 }
 -(void)layoutCenter{
     UIView *superview = self.superview;
+
     /* 2) Create the constraint to put the button horizontally in the center */
     NSLayoutConstraint *centerXConstraint =
     [NSLayoutConstraint constraintWithItem:self
@@ -71,7 +119,7 @@
 }
 -(void)layoutVerticalNextTo:(id)controller{
     
-     self.translatesAutoresizingMaskIntoConstraints = NO;
+    self.translatesAutoresizingMaskIntoConstraints = NO;
     NSDictionary *dicBrentView = NSDictionaryOfVariableBindings(self,controller);
     NSString * KHConstraint =@"H:|-[self(>=50)]-|";
     NSString * KVConstraint = [NSString stringWithFormat:@"V:[controller]-[self]"];
@@ -83,7 +131,7 @@
 }
 -(void)layoutVerticalNextTo:(id)controller ofSize:(CGSize)size{
     self.translatesAutoresizingMaskIntoConstraints = NO;
-
+    
     NSDictionary *dicBrentView = NSDictionaryOfVariableBindings(self , controller);
     NSString * KHConstraint;
     NSString * KVConstraint;
@@ -97,6 +145,31 @@
     if (sizeH > 0) {
         KVConstraint = [NSString stringWithFormat:@"V:[controller]-[self(==%f)]",sizeH];
     }else{
+        KVConstraint = [NSString stringWithFormat:@"V:[controller]-[self]-|"];
+    }
+    
+    NSMutableArray *constraintArray = [[NSMutableArray alloc]init];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:dicBrentView]];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVConstraint options:0 metrics:nil views:dicBrentView]];
+    [self.superview addConstraints:constraintArray];
+}
+
+-(void)layoutVerticalNextTo:(id)controller ofMarginSize:(CGSize)size{
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSDictionary *dicBrentView = NSDictionaryOfVariableBindings(self , controller);
+    NSString * KHConstraint;
+    NSString * KVConstraint;
+    CGFloat sizeH = size.height;
+    CGFloat sizeW = size.width;
+    if (sizeW > 0) {
+        KHConstraint =[NSString stringWithFormat:@"H:|-%f-[self]-%f-|",sizeW,sizeW];
+    }else{
+        KHConstraint =@"H:|-[self]-|";
+    }
+    if (sizeH > 0) {
+        KVConstraint = [NSString stringWithFormat:@"V:[controller]-[self(>=53)]"];
+    }else{
         KVConstraint = [NSString stringWithFormat:@"V:[controller]-[self]"];
     }
     
@@ -105,9 +178,25 @@
     [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVConstraint options:0 metrics:nil views:dicBrentView]];
     [self.superview addConstraints:constraintArray];
 }
+
 -(void)layoutHorizontalNextTo:(id)controller{
+    self.translatesAutoresizingMaskIntoConstraints = NO;
     
+    NSDictionary *dicBrentView = NSDictionaryOfVariableBindings(self , controller);
+    NSString * KHConstraint;
+    NSString * KVConstraint;
+    
+    
+    KHConstraint =@"H:[controller][self]-3-|";
+    
+    KVConstraint = [NSString stringWithFormat:@"V:|[self]|"];
+    
+    NSMutableArray *constraintArray = [[NSMutableArray alloc]init];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:dicBrentView]];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVConstraint options:0 metrics:nil views:dicBrentView]];
+    [self.superview addConstraints:constraintArray];
 }
+
 -(void)layoutHorizontalNextTo:(id)controller ofSize:(CGSize)size{
     self.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -117,14 +206,14 @@
     CGFloat sizeH = size.height;
     CGFloat sizeW = size.width;
     if (sizeW > 0) {
-        KHConstraint =[NSString stringWithFormat:@"H:[controller][self(==%f)]",sizeW];
+        KHConstraint =[NSString stringWithFormat:@"H:[controller]-[self(==%f)]",sizeW];
     }else{
-        KHConstraint =@"H:[controller][self]-10-|";
+        KHConstraint =@"H:[controller]-[self]|";
     }
     if (sizeH > 0) {
-        KVConstraint = [NSString stringWithFormat:@"V:|-[self(>=%f)]|",sizeH];
+        KVConstraint = [NSString stringWithFormat:@"V:|-[self(>=%f)]",sizeH];
     }else{
-        KVConstraint = [NSString stringWithFormat:@"V:|-[self]|"];
+        KVConstraint = [NSString stringWithFormat:@"V:|-[self]-|"];
     }
     
     NSMutableArray *constraintArray = [[NSMutableArray alloc]init];
@@ -144,9 +233,32 @@
         KVContraint = @"H:|[self(>=50)]";
     }
     if (sizeH > 0 ) {
-        KHConstraint = [NSString stringWithFormat:@"V:|-[self(==%f)]|",sizeH];
+        KHConstraint = [NSString stringWithFormat:@"V:|[self(>=%f)]|",sizeH];
     }else{
-        KHConstraint = @"V:|-[self]|";
+        KHConstraint = @"V:|[self]|";
+    }
+    
+    NSMutableArray *constraintArray  = [[NSMutableArray alloc]init];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+    
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVContraint options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+    [self.superview addConstraints:constraintArray];
+}
+-(void)layoutRightInSuperwithSize:(CGSize )size{
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSString *KHConstraint;
+    NSString *KVContraint;
+    CGFloat sizeH = size.height;
+    CGFloat sizeW = size.width;
+    if (sizeW > 0) {
+        KVContraint = [NSString stringWithFormat:@"H:[self(==%f)]|",sizeW];
+    }else{
+        KVContraint = @"H:|[self(>=50)]|";
+    }
+    if (sizeH > 0 ) {
+        KHConstraint = [NSString stringWithFormat:@"V:|[self(>=%f)]|",sizeH];
+    }else{
+        KHConstraint = @"V:|[self]|";
     }
     
     NSMutableArray *constraintArray  = [[NSMutableArray alloc]init];

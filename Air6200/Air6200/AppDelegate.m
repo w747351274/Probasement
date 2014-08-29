@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 #import "MasterContentViewController.h"
-
+#import "PlainViewController.h"
+#import "MediaViewController.h"
+#import "ArticlesViewController.h"
+#import "SettingViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -17,7 +20,18 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    MasterContentViewController *masterViewcontroller = [[MasterContentViewController alloc]init];
+    UIViewController *plainViewController = [[PlainViewController alloc]init];
+    UIViewController *mediaViewController = [[MediaViewController alloc]init];
+    UIViewController *articlesViewController =[[ArticlesViewController alloc]init];
+    UIViewController *settingViewController = [[SettingViewController alloc]init];
+    NSArray * arrMenu =@[@{@"title": @"plain",@"image":@"news"},
+                         @{@"title": @"media",@"image":@"myradio"},
+                         @{@"title": @"articles",@"image":@"liveradio"},
+                         @{@"title": @"setting",@"image":@"liveradio"}];
+    NSArray * arrController = @[plainViewController,mediaViewController,articlesViewController
+                                ,settingViewController];
+    MasterContentViewController *masterViewcontroller = [[MasterContentViewController alloc]initWithMenu:arrMenu controller:arrController];
+
     self.window.rootViewController = masterViewcontroller;
 
     [self.window makeKeyAndVisible];

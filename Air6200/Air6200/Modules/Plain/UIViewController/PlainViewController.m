@@ -7,12 +7,15 @@
 //
 
 #import "PlainViewController.h"
+#import "ContentView.h"
+
 
 @interface PlainViewController ()
 
 @end
 
 @implementation PlainViewController
+const CGFloat listWidth = 370;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,9 +27,17 @@
 }
 
 // 设定画面元素
-- (void)initViews{
-    
+- (void)initViews {
+    [super initViews];
+    plainListView = [[PlainListView alloc]init];
+    plainListView.delegate = self;
+    [self.view addSubview:plainListView];
+    plainContentView = [[PlainContentView alloc]init];
+    [self.view addSubview:plainContentView];
+    [plainListView layoutLeftInSuperwithSize:CGSizeMake(370, 0)];
+    [plainContentView layoutHorizontalNextTo:plainListView];
 }
+
 // 设定画面跳转关系
 - (void)configureAll{
     
@@ -55,5 +66,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(void)selectedPlainUrl:(NSString *)url{
+    [plainContentView reloadContent:url];
+}
 @end

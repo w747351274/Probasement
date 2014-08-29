@@ -7,7 +7,16 @@
 //
 
 #import <ProService/BaseViewController.h>
+#import "MenuView.h"
+#import "ContentView.h"
 
-@interface MasterContentViewController : BaseViewController
+@interface MasterContentViewController : BaseViewController<MenuDelegate>{
+    MenuView *menuView;
+    UIView *contentView;
+}
+@property(nonatomic,strong)NSArray *arrController;
+@property(nonatomic,strong)NSArray *arrMenu;
+
+-(id)initWithMenu:(NSArray *)arrMenu controller:(NSArray *)arrController;
 
 @end

@@ -94,7 +94,6 @@
 		8B2E9E6D196F6F4C000DEC3B /* Category.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AF7BF196E21A800D6A575 /* Category.h */; };
 		8B2E9E6E196F6F4C000DEC3B /* ApplicationTool.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B97EC52196EB84C0001BA0E /* ApplicationTool.h */; };
 		8B2E9E6F196F6F4C000DEC3B /* HttpUtil.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B97EC54196EB84C0001BA0E /* HttpUtil.h */; };
-		8B2E9E70196F6F4C000DEC3B /* UIResourceTools.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B97EC56196EB84C0001BA0E /* UIResourceTools.h */; };
 		8B2E9E71196F6F4C000DEC3B /* Utility.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B97EC5B196EB8B50001BA0E /* Utility.h */; };
 		8B2E9E72196F6F4C000DEC3B /* AppConstants.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFBD4196E6D2F00D6A575 /* AppConstants.h */; };
 		8B2E9E73196F6F4C000DEC3B /* MacroDefine.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFBD5196E6D2F00D6A575 /* MacroDefine.h */; };
@@ -123,7 +122,6 @@
 		8B97EC50196EB33C0001BA0E /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B97EC3D196EB33C0001BA0E /* UncaughtExceptionHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8B97EC58196EB84C0001BA0E /* ApplicationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B97EC53196EB84C0001BA0E /* ApplicationTool.m */; };
 		8B97EC59196EB84C0001BA0E /* HttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B97EC55196EB84C0001BA0E /* HttpUtil.m */; };
-		8B97EC5A196EB84C0001BA0E /* UIResourceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B97EC57196EB84C0001BA0E /* UIResourceTools.m */; };
 		8B97EC5E196EB9880001BA0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B97EC5D196EB9880001BA0E /* SystemConfiguration.framework */; };
 		8B97EC60196EB9E70001BA0E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B97EC5F196EB9E70001BA0E /* MobileCoreServices.framework */; };
 		8B97EC62196EB9EF0001BA0E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B97EC61196EB9EF0001BA0E /* CFNetwork.framework */; };
@@ -214,7 +212,6 @@
 				8B2E9E6D196F6F4C000DEC3B /* Category.h in Copy Files */,
 				8B2E9E6E196F6F4C000DEC3B /* ApplicationTool.h in Copy Files */,
 				8B2E9E6F196F6F4C000DEC3B /* HttpUtil.h in Copy Files */,
-				8B2E9E70196F6F4C000DEC3B /* UIResourceTools.h in Copy Files */,
 				8B2E9E71196F6F4C000DEC3B /* Utility.h in Copy Files */,
 				8B2E9E72196F6F4C000DEC3B /* AppConstants.h in Copy Files */,
 				8B2E9E73196F6F4C000DEC3B /* MacroDefine.h in Copy Files */,
@@ -340,8 +337,6 @@
 		8B97EC53196EB84C0001BA0E /* ApplicationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationTool.m; sourceTree = "<group>"; };
 		8B97EC54196EB84C0001BA0E /* HttpUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUtil.h; sourceTree = "<group>"; };
 		8B97EC55196EB84C0001BA0E /* HttpUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUtil.m; sourceTree = "<group>"; };
-		8B97EC56196EB84C0001BA0E /* UIResourceTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIResourceTools.h; sourceTree = "<group>"; };
-		8B97EC57196EB84C0001BA0E /* UIResourceTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIResourceTools.m; sourceTree = "<group>"; };
 		8B97EC5B196EB8B50001BA0E /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		8B97EC5D196EB9880001BA0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8B97EC5F196EB9E70001BA0E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -540,8 +535,6 @@
 				8B97EC53196EB84C0001BA0E /* ApplicationTool.m */,
 				8B97EC54196EB84C0001BA0E /* HttpUtil.h */,
 				8B97EC55196EB84C0001BA0E /* HttpUtil.m */,
-				8B97EC56196EB84C0001BA0E /* UIResourceTools.h */,
-				8B97EC57196EB84C0001BA0E /* UIResourceTools.m */,
 				8B97EC5B196EB8B50001BA0E /* Utility.h */,
 			);
 			path = Utility;
@@ -805,7 +798,6 @@
 				8B97EC4D196EB33C0001BA0E /* MJRefreshHeaderView.m in Sources */,
 				8B0AFBC7196E692000D6A575 /* UITabBarController+Custom.m in Sources */,
 				8B0AFBC5196E692000D6A575 /* UILabel+AgileCreate.m in Sources */,
-				8B97EC5A196EB84C0001BA0E /* UIResourceTools.m in Sources */,
 				8B0AFBCB196E692000D6A575 /* UIView+Animation.m in Sources */,
 				8B0AFBB6196E692000D6A575 /* NSData+Addition.m in Sources */,
 				8B0AFBC3196E692000D6A575 /* UIImage+Addition.m in Sources */,
