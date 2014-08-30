@@ -7,11 +7,10 @@
 //
 
 #import <Proservice/BaseViewController.h>
-#import "ContentView.h"
+#import "WebContentView.h"
 @interface SettingViewController : BaseViewController<UITextFieldDelegate>{
-    ContentView *content;
     UITextField *textfield;
     NSString *currentSite;
 }
-
+@property(nonatomic,strong)UIView<ContentViewProtocal> *contentView;
 @end

@@ -12,9 +12,6 @@
 
 typedef  void(^block_Select_t)(NSUInteger);
 @interface MenuButtonItem : UIControl
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag;
-- (instancetype)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage NS_AVAILABLE_IOS(7_0);
-- (id)initWithTabBarSystemItem:(UITabBarSystemItem)systemItem tag:(NSInteger)tag;
 @property(nonatomic,strong) NSString * title;
 @property(nonatomic,strong) UIImage *image;
 @property(nonatomic,copy) block_Select_t block_Select;

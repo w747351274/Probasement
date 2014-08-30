@@ -7,10 +7,12 @@
 //
 
 #import <ProService/BaseView.h>
-#import "ContentView.h"
+#import "ContentViewProtocal.h"
 
 @interface PlainContentView : BaseView{
-    ContentView *content;
+
 }
+@property(nonatomic,strong) UIView<ContentViewProtocal> *content;
 -(void)reloadContent:(NSString *)url;
+
 @end

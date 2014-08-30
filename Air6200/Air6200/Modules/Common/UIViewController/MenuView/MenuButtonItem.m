@@ -22,16 +22,7 @@ const CGFloat heightMenuButtonItem = 50;
     }
     return self;
 }
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image tag:(NSInteger)tag{
-    
-    return nil;
-}
-- (instancetype)initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage NS_AVAILABLE_IOS(7_0){
-    return nil;
-}
-- (id)initWithTabBarSystemItem:(UITabBarSystemItem)systemItem tag:(NSInteger)tag{
-    return nil;
-}
+
 
 - (void)drawRect:(CGRect)rect
 {

@@ -8,7 +8,6 @@
 
 #import <ProService/BaseViewController.h>
 #import "MenuView.h"
-#import "ContentView.h"
 
 @interface MasterContentViewController : BaseViewController<MenuDelegate>{
     MenuView *menuView;

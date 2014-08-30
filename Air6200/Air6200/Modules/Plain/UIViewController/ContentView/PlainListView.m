@@ -34,17 +34,11 @@
     [tableViewMain layoutFullInSuper];
     self.service = [[PlainService alloc]init];
 };
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return (NSInteger)[self.service plainDataSource].count;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *strCellId = @"cellId";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:strCellId];
@@ -55,6 +49,7 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%d.%@",indexPath.row+1,strRowContent];
     return cell;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *fileName = [[self.service plainDataSource][indexPath.row] objectForKey:@"fileName"];
      NSString *path = [NSString pathFromFileNamed:fileName] ;

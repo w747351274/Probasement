@@ -7,7 +7,7 @@
 //
 
 #import "PlainContentView.h"
- 
+#import "TextContentView.h"
 @implementation PlainContentView
 
 - (id)initWithFrame:(CGRect)frame
@@ -21,15 +21,14 @@
 -(void)initViews{
     [super initViews];
 
-    content = [[ContentView alloc]init];
-    [self addSubview:content];
-    [content layoutFullInSuper];
+    self.content = [[TextContentView alloc]init];
+    [self addSubview:self.content];
+    [self.content layoutFullInSuper];
 };
 -(void)reloadContent:(NSString *)strUrl{
     NSString *path = strUrl;
     NSURL *url = [NSURL fileURLWithPath:path];
-    content.url = url;
-    [content reloadWebView];
+    [self.content reloadViewWithURL:url];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

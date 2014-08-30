@@ -39,13 +39,13 @@
     [buttonGo addTarget:self action:@selector(goPage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonGo];
     
-    content = [[ContentView alloc]init];
+    self.contentView = [[WebContentView alloc]init];
     
-    [self.view addSubview:content];
+    [self.view addSubview:self.contentView];
     
     [textfield layoutTopInSuperwithSize:CGSizeMake(430, 30)];
     [buttonGo layoutHorizontalNextTo:textfield ofSize:CGSizeMake(30, 30)];
-    [content layoutVerticalNextTo:textfield ofSize:CGSizeMake(0, 0)];
+    [self.contentView layoutVerticalNextTo:textfield ofSize:CGSizeMake(0, 0)];
     
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -73,8 +73,8 @@
     }else{
         strUrl  =[NSString stringWithFormat:@"http://%@",textfield.text];
     }
-    content.url = [NSURL URLWithString:strUrl];
-    [content reloadWebView];
+ 
+    [self.contentView reloadViewWithURL:[NSURL URLWithString:strUrl]];
 }
 - (void)viewDidLoad
 {

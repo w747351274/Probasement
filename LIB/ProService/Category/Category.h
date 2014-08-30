@@ -18,7 +18,6 @@
 #import "UIAlertView+Addition.h"
 #import "UIColor+Addition.h"
 #import "UIColor+Addition.h"
-#import "UIImage+Addition.h"
 #import "UIView+Animation.h"
 #import "UIView+Frame.h"
 #import "UIView+Layer.h"
