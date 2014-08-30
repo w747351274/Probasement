@@ -20,7 +20,6 @@
 		8B0AFBC0196E692000D6A575 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFB99196E691F00D6A575 /* UIColor+Addition.m */; };
 		8B0AFBC1196E692000D6A575 /* UIDevice+DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFB9B196E691F00D6A575 /* UIDevice+DeviceInfo.m */; };
 		8B0AFBC2196E692000D6A575 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFB9D196E691F00D6A575 /* UIDevice+IdentifierAddition.m */; };
-		8B0AFBC3196E692000D6A575 /* UIImage+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFB9F196E691F00D6A575 /* UIImage+Addition.m */; };
 		8B0AFBC4196E692000D6A575 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFBA1196E692000D6A575 /* UIImageView+LBBlurredImage.m */; };
 		8B0AFBC5196E692000D6A575 /* UILabel+AgileCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFBA3196E692000D6A575 /* UILabel+AgileCreate.m */; };
 		8B0AFBC6196E692000D6A575 /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFBA5196E692000D6A575 /* UINavigationController+Retro.m */; };
@@ -79,7 +78,6 @@
 		8B2E9E5E196F6F4C000DEC3B /* UIColor+Addition.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFB98196E691F00D6A575 /* UIColor+Addition.h */; };
 		8B2E9E5F196F6F4C000DEC3B /* UIDevice+DeviceInfo.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFB9A196E691F00D6A575 /* UIDevice+DeviceInfo.h */; };
 		8B2E9E60196F6F4C000DEC3B /* UIDevice+IdentifierAddition.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFB9C196E691F00D6A575 /* UIDevice+IdentifierAddition.h */; };
-		8B2E9E61196F6F4C000DEC3B /* UIImage+Addition.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFB9E196E691F00D6A575 /* UIImage+Addition.h */; };
 		8B2E9E62196F6F4C000DEC3B /* UIImageView+LBBlurredImage.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFBA0196E691F00D6A575 /* UIImageView+LBBlurredImage.h */; };
 		8B2E9E63196F6F4C000DEC3B /* UILabel+AgileCreate.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFBA2196E692000D6A575 /* UILabel+AgileCreate.h */; };
 		8B2E9E64196F6F4C000DEC3B /* UINavigationController+Retro.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8B0AFBA4196E692000D6A575 /* UINavigationController+Retro.h */; };
@@ -197,7 +195,6 @@
 				8B2E9E5E196F6F4C000DEC3B /* UIColor+Addition.h in Copy Files */,
 				8B2E9E5F196F6F4C000DEC3B /* UIDevice+DeviceInfo.h in Copy Files */,
 				8B2E9E60196F6F4C000DEC3B /* UIDevice+IdentifierAddition.h in Copy Files */,
-				8B2E9E61196F6F4C000DEC3B /* UIImage+Addition.h in Copy Files */,
 				8B2E9E62196F6F4C000DEC3B /* UIImageView+LBBlurredImage.h in Copy Files */,
 				8B2E9E63196F6F4C000DEC3B /* UILabel+AgileCreate.h in Copy Files */,
 				8B2E9E64196F6F4C000DEC3B /* UINavigationController+Retro.h in Copy Files */,
@@ -251,8 +248,6 @@
 		8B0AFB9B196E691F00D6A575 /* UIDevice+DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceInfo.m"; sourceTree = "<group>"; };
 		8B0AFB9C196E691F00D6A575 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
 		8B0AFB9D196E691F00D6A575 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
-		8B0AFB9E196E691F00D6A575 /* UIImage+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Addition.h"; sourceTree = "<group>"; };
-		8B0AFB9F196E691F00D6A575 /* UIImage+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Addition.m"; sourceTree = "<group>"; };
 		8B0AFBA0196E691F00D6A575 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
 		8B0AFBA1196E692000D6A575 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
 		8B0AFBA2196E692000D6A575 /* UILabel+AgileCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AgileCreate.h"; sourceTree = "<group>"; };
@@ -355,6 +350,7 @@
 		8BA0550A196B7B8A00B7E082 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8BA0550C196B7B8A00B7E082 /* ProServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProServiceTests.m; sourceTree = "<group>"; };
 		8BA05516196B7BDC00B7E082 /* ProHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProHeader.h; sourceTree = "<group>"; };
+		BA9D375F19B169BC0081759E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,6 +561,7 @@
 		8BA054EF196B7B8900B7E082 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA9D375F19B169BC0081759E /* QuartzCore.framework */,
 				8B97EC67196EBAA90001BA0E /* CoreData.framework */,
 				8B97EC65196EBA770001BA0E /* UIKit.framework */,
 				8B97EC63196EBA640001BA0E /* Security.framework */,
@@ -647,8 +644,6 @@
 				8B0AFB9B196E691F00D6A575 /* UIDevice+DeviceInfo.m */,
 				8B0AFB9C196E691F00D6A575 /* UIDevice+IdentifierAddition.h */,
 				8B0AFB9D196E691F00D6A575 /* UIDevice+IdentifierAddition.m */,
-				8B0AFB9E196E691F00D6A575 /* UIImage+Addition.h */,
-				8B0AFB9F196E691F00D6A575 /* UIImage+Addition.m */,
 				8B0AFBA0196E691F00D6A575 /* UIImageView+LBBlurredImage.h */,
 				8B0AFBA1196E692000D6A575 /* UIImageView+LBBlurredImage.m */,
 				8B0AFBA2196E692000D6A575 /* UILabel+AgileCreate.h */,
@@ -800,7 +795,6 @@
 				8B0AFBC5196E692000D6A575 /* UILabel+AgileCreate.m in Sources */,
 				8B0AFBCB196E692000D6A575 /* UIView+Animation.m in Sources */,
 				8B0AFBB6196E692000D6A575 /* NSData+Addition.m in Sources */,
-				8B0AFBC3196E692000D6A575 /* UIImage+Addition.m in Sources */,
 				8B0AFBC9196E692000D6A575 /* UITextField+LimitLength.m in Sources */,
 				8B97EC4A196EB33C0001BA0E /* MJRefreshBaseView.m in Sources */,
 				8B0AFBB8196E692000D6A575 /* NSFileManager+ Addition.m in Sources */,
