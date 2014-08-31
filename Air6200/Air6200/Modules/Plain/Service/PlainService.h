@@ -10,4 +10,6 @@
 #import "PlainProtocol.h"
 @interface PlainService : NSObject<PlainProtocol>
 -(NSArray *)plainDataSource;
+-(NSString *)dataFilePath:(NSString *)strFileName;
+-(NSString *)defaultContentFile;
 @end

@@ -52,9 +52,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *fileName = [[self.service plainDataSource][indexPath.row] objectForKey:@"fileName"];
-     NSString *path = [NSString pathFromFileNamed:fileName] ;
+    NSString *path = [self.service dataFilePath:fileName];
     if ([self.delegate respondsToSelector:@selector(selectedPlainUrl:)]) {
         [self.delegate selectedPlainUrl:path];
     }
+}
+-(void)showDefaultContent{
+    if ([self.delegate respondsToSelector:@selector(selectedPlainUrl:)]) {
+        [self.delegate selectedPlainUrl:[self.service defaultContentFile]];
+    }
+
 }
 @end

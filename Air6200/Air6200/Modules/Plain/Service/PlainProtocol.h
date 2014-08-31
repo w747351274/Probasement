@@ -10,4 +10,6 @@
 
 @protocol PlainProtocol <NSObject>
 -(NSArray *)plainDataSource;
+-(NSString *)dataFilePath:(NSString *)strFileName;
+-(NSString *)defaultContentFile;
 @end

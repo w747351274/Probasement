@@ -19,5 +19,5 @@
 }
 @property(nonatomic, strong)id<PlainProtocol> service;
 @property(nonatomic, weak)  id<PlainSelectedProtocol> delegate;
-
+-(void)showDefaultContent;
 @end

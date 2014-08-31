@@ -40,7 +40,8 @@ const CGFloat listWidth = 370;
 // 设定画面跳转关系
 - (void)configureAll{
     //默认页面
-    [self selectedPlainUrl:[[NSBundle mainBundle]pathForResource:@"1" ofType:@"html"] ];
+//    [self selectedPlainUrl:[[NSBundle mainBundle]pathForResource:@"1" ofType:@"html"] ];
+    [plainListView showDefaultContent];
 }
 
 
