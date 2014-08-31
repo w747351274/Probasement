@@ -27,7 +27,7 @@
     NSArray * arrMenu =@[@{@"title": @"plain",@"image":@"news"},
                          @{@"title": @"media",@"image":@"myradio"},
                          @{@"title": @"articles",@"image":@"liveradio"},
-                         @{@"title": @"setting",@"image":@"liveradio"}];
+                         @{@"title": @"setting",@"image":@"setting"}];
     NSArray * arrController = @[plainViewController,mediaViewController,articlesViewController
                                 ,settingViewController];
     MasterContentViewController *masterViewcontroller = [[MasterContentViewController alloc]initWithMenu:arrMenu controller:arrController];

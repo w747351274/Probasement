@@ -39,6 +39,7 @@
 		BA43F2E819A709E200EBC61C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43F2E719A709E200EBC61C /* MobileCoreServices.framework */; };
 		BA43F2EC19A70A2300EBC61C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43F2EB19A70A2300EBC61C /* CoreFoundation.framework */; };
 		BA43F2EE19A70AE300EBC61C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43F2ED19A70AE300EBC61C /* libz.dylib */; };
+		BA50B78C19B3362A00D8F8A2 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA50B78B19B3362A00D8F8A2 /* setting@2x.png */; };
 		BA55594919A6D64F0074092F /* libProService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE2933519A6D5F500B15F17 /* libProService.a */; };
 		BA55595819A6E2790074092F /* PlainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA55595719A6E2790074092F /* PlainViewController.m */; };
 		BA55595F19A6E4530074092F /* MasterContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA55595E19A6E4530074092F /* MasterContentViewController.m */; };
@@ -234,6 +235,7 @@
 		BA43F2E919A709FD00EBC61C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BA43F2EB19A70A2300EBC61C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		BA43F2ED19A70AE300EBC61C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BA50B78B19B3362A00D8F8A2 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
 		BA55595619A6E2790074092F /* PlainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlainViewController.h; sourceTree = "<group>"; };
 		BA55595719A6E2790074092F /* PlainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlainViewController.m; sourceTree = "<group>"; };
 		BA55595D19A6E4530074092F /* MasterContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterContentViewController.h; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 		BA55594C19A6DA610074092F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BA50B78B19B3362A00D8F8A2 /* setting@2x.png */,
 				BA1C1E6819B06CCA00E018A3 /* lanch@2x.png */,
 				BA1C1E2719B0146A00E018A3 /* loding */,
 				BAF2B1AF19AD94F00095E804 /* 2-2.txt */,
@@ -992,6 +995,7 @@
 				BAFC607F19AF2F4700C7DA3B /* 93.html in Resources */,
 				BAFC604219AF2F4700C7DA3B /* 32.html in Resources */,
 				BAFC607C19AF2F4700C7DA3B /* 90.html in Resources */,
+				BA50B78C19B3362A00D8F8A2 /* setting@2x.png in Resources */,
 				BA1C1E6019B01B9400E018A3 /* loading1@2x~ipad.png in Resources */,
 				BAFC606419AF2F4700C7DA3B /* 66.html in Resources */,
 				BA1C1E5119B0166C00E018A3 /* loading2@2x.png in Resources */,
