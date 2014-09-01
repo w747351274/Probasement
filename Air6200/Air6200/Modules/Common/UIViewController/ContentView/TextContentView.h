@@ -10,6 +10,7 @@
 #import <ProService/BaseView.h>
 #import "ContentViewProtocal.h"
 @interface TextContentView : BaseView<ContentViewProtocal>{
+    UIScrollView *scrollView;
     UILabel *label;
 }
 - (void)reloadViewWithURL:(NSURL *)url;

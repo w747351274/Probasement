@@ -25,18 +25,26 @@
     [self addSubview:self.content];
     [self.content layoutFullInSuper];
 };
+
 -(void)reloadContent:(NSString *)strUrl{
     NSString *path = strUrl;
     NSURL *url = [NSURL fileURLWithPath:path];
     [self.content reloadViewWithURL:url];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
+-(void)layoutEqualSizeNextTo:(id)controller{
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSDictionary *dicBrentView = NSDictionaryOfVariableBindings(self , controller);
+    NSString * KHConstraint;
+    NSString * KVConstraint;
+
+    KVConstraint =[NSString stringWithFormat:@"V:|-[self(==controller)]-|"];
+    KHConstraint = [NSString stringWithFormat:@"H:[controller]-[self(==controller)]"];
+    
+    NSMutableArray *constraintArray = [[NSMutableArray alloc]init];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:dicBrentView]];
+    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVConstraint options:0 metrics:nil views:dicBrentView]];
+    [self.superview addConstraints:constraintArray];
+}
 @end

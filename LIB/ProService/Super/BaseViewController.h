@@ -14,6 +14,10 @@
 typedef void(^KeyboardBlock)(CGFloat);
 typedef void(^tapBlock_t)(void);
 
+static inline bool isOrientationIsLandscape() {
+    return UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
+}
+
 @interface BaseViewController : UIViewController<UIGestureRecognizerDelegate>
 {
     MBProgressHUD *hud;
@@ -37,5 +41,5 @@ typedef void(^tapBlock_t)(void);
 
 // 为参数view 加入tap 关闭键盘的事件效果
 - (void)addTapCloseListenToView:(UIView *)view;
-
+- (void)orientationDidChange:(BOOL)isOrientationIsLandscape;
 @end

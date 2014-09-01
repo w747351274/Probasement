@@ -28,22 +28,23 @@ const CGFloat listWidth = 370;
 // 设定画面元素
 - (void)initViews {
     [super initViews];
+    
     plainListView = [[PlainListView alloc]init];
     plainListView.delegate = self;
     [self.view addSubview:plainListView];
     plainContentView = [[PlainContentView alloc]init];
     [self.view addSubview:plainContentView];
-    [plainListView layoutLeftInSuperwithSize:CGSizeMake(370, 0)];
+    [self setDefaultLayout];
+}
+-(void)setDefaultLayout{
+    [plainListView layoutLeftInSuperwithSize:CGSizeMake(360, 0)];
     [plainContentView layoutHorizontalNextTo:plainListView];
 }
-
 // 设定画面跳转关系
 - (void)configureAll{
     //默认页面
-//    [self selectedPlainUrl:[[NSBundle mainBundle]pathForResource:@"1" ofType:@"html"] ];
     [plainListView showDefaultContent];
 }
-
 
 - (void)viewDidLoad
 {
@@ -57,17 +58,23 @@ const CGFloat listWidth = 370;
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 -(void)selectedPlainUrl:(NSString *)url{
+    if (!isOrientationIsLandscape()) {
+
+    }
     [plainContentView reloadContent:url];
+
+}
+-(void)orientationDidChange:(BOOL)isOrientationIsLandscape{
+    if (isOrientationIsLandscape) {
+        NSLog(@"isOrientationIsLandscape");
+        [self.view removeConstraints:self.view.constraints];
+        [self setDefaultLayout];
+    }else{
+//        NSLog(@"not OrientationIsLandscape");
+//        [self.view removeConstraints:self.view.constraints];
+//        [plainListView layoutFullInSuper];
+//        [plainContentView layoutEqualSizeNextTo:plainListView];
+    }
 }
 @end

@@ -11,7 +11,6 @@
 @implementation TextContentView
 
 -(void)initViews{
-    UIScrollView *scrollView;
     NSDictionary *viewsDictionary;
     
     // Create the scroll view and the image view.
@@ -39,6 +38,7 @@
     
     label.text = [NSString stringWithContentsOfURL:url
                                           encoding:NSUTF8StringEncoding error:nil];
+    [scrollView setContentOffset:CGPointMake(0, 0)];
 }
 - (id)initWithFrame:(CGRect)frame
 {

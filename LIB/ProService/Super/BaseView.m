@@ -11,7 +11,10 @@
 @implementation BaseView
 
 - (void)initViews{
-    
+    if (IOS7_OR_LATER) {
+        //ios7 pushviewcontroller 透明效果不好的bug
+        self.backgroundColor = [UIColor whiteColor];
+    }
 }
 - (id)initWithFrame:(CGRect)frame
 {

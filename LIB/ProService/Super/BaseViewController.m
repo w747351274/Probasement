@@ -18,7 +18,6 @@
 // 初始化共通设置,比如背景图,导航栏风格等
 - (void)initViews
 {
-    [self addKeyboardNotification];
     tapRecognizer = [[UITapGestureRecognizer alloc] init];
     tapRecognizer.delegate = self;
     [self addTapCloseListenToView:self.view];
@@ -77,11 +76,25 @@
         self.navigationController.navigationBar.tintColor = UIColorFromRGB(0xf1f1f1);
     }
 }
-
-- (void)viewDidAppear:(BOOL)animated
-{
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self addKeyboardNotification];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
-
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self removeKeyboardNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+}
+-(void)deviceOrientationDidChange:(NSNotification *) notification
+{
+    [self orientationDidChange:isOrientationIsLandscape()];
+}
+-(void)orientationDidChange:(BOOL)isOrientationIsLandscape{
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -201,4 +214,5 @@
 {
     [self.view endEditing:YES];
 }
+
 @end

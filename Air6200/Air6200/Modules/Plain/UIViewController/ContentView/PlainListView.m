@@ -22,10 +22,6 @@
 
 -(void)initViews{
     [super initViews];
-    self.backgroundColor = [UIColor redColor];
-    UILabel *label = [UILabel labelWithContent:@"plainListViewController"];
-    [self addSubview:label];
-    [label layoutTopInSuperwithMarginSize:CGSizeMake(50, 100)];
     tableViewMain = [[UITableView alloc]init];
     tableViewMain.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     tableViewMain.delegate = self;
@@ -61,6 +57,5 @@
     if ([self.delegate respondsToSelector:@selector(selectedPlainUrl:)]) {
         [self.delegate selectedPlainUrl:[self.service defaultContentFile]];
     }
-
 }
 @end

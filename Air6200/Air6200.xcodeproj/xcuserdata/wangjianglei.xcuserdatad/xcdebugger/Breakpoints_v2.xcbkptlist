@@ -57,13 +57,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Air6200/Modules/Plain/Service/PlainService.m"
-            timestampString = "431185213.080881"
+            filePath = "Air6200/Modules/Plain/UIViewController/PlainViewController.m"
+            timestampString = "431246003.712185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "-bundlePath"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-selectedPlainUrl:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
