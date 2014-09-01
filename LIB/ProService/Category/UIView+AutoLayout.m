@@ -213,7 +213,7 @@
     if (sizeH > 0) {
         KVConstraint = [NSString stringWithFormat:@"V:|-[self(>=%f)]",sizeH];
     }else{
-        KVConstraint = [NSString stringWithFormat:@"V:|-[self]-|"];
+        KVConstraint = [NSString stringWithFormat:@"V:|-[self]|"];
     }
     
     NSMutableArray *constraintArray = [[NSMutableArray alloc]init];

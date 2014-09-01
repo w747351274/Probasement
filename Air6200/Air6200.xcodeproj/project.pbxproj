@@ -24,6 +24,7 @@
 		BA1C1E6619B01B9400E018A3 /* loading7@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BA1C1E5E19B01B9400E018A3 /* loading7@2x~ipad.png */; };
 		BA1C1E6719B01B9400E018A3 /* loading8@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BA1C1E5F19B01B9400E018A3 /* loading8@2x~ipad.png */; };
 		BA1C1E6919B06CCA00E018A3 /* lanch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA1C1E6819B06CCA00E018A3 /* lanch@2x.png */; };
+		BA25C1C719B4A08E00967DE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA25C1C619B4A08E00967DE9 /* Default-568h@2x.png */; };
 		BA28592619AC3CE300A296FF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA28592519AC3CE300A296FF /* icon.png */; };
 		BA28592919AC3D5700A296FF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA28592819AC3D5700A296FF /* icon@2x.png */; };
 		BA28593019AC670E00A296FF /* MenuButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA28592D19AC670E00A296FF /* MenuButtonItem.m */; };
@@ -116,6 +117,7 @@
 		BA1C1E5E19B01B9400E018A3 /* loading7@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading7@2x~ipad.png"; sourceTree = "<group>"; };
 		BA1C1E5F19B01B9400E018A3 /* loading8@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading8@2x~ipad.png"; sourceTree = "<group>"; };
 		BA1C1E6819B06CCA00E018A3 /* lanch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lanch@2x.png"; sourceTree = "<group>"; };
+		BA25C1C619B4A08E00967DE9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BA28592519AC3CE300A296FF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		BA28592819AC3D5700A296FF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		BA28592C19AC670E00A296FF /* MenuButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuButtonItem.h; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		BA55594C19A6DA610074092F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BA25C1C619B4A08E00967DE9 /* Default-568h@2x.png */,
 				BA50B78B19B3362A00D8F8A2 /* setting@2x.png */,
 				BA1C1E6819B06CCA00E018A3 /* lanch@2x.png */,
 				BA1C1E2719B0146A00E018A3 /* loding */,
@@ -690,6 +693,7 @@
 				BA50B78F19B353E400D8F8A2 /* PlainData.bundle in Resources */,
 				BAF2B1B019AD94F00095E804 /* 2-2.txt in Resources */,
 				BA1C1E5619B0166C00E018A3 /* loading7@2x.png in Resources */,
+				BA25C1C719B4A08E00967DE9 /* Default-568h@2x.png in Resources */,
 				BAE2907E19A6D4A000B15F17 /* InfoPlist.strings in Resources */,
 				BA1C1E6419B01B9400E018A3 /* loading5@2x~ipad.png in Resources */,
 				BAE2908619A6D4A000B15F17 /* Images.xcassets in Resources */,

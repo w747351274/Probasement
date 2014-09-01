@@ -33,7 +33,9 @@ const CGFloat listWidth = 370;
     plainListView.delegate = self;
     [self.view addSubview:plainListView];
     
+    UIGestureRecognizer *panGestureRecognizer =[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(panHandle:)];
     plainContentView = [[PlainContentView alloc]init];
+    [plainContentView addGestureRecognizer:panGestureRecognizer];
     [self.view addSubview:plainContentView];
     [self setDefaultLayout];
 }
@@ -44,6 +46,11 @@ const CGFloat listWidth = 370;
 -(void)setContentFull{
     [plainListView layoutFullInSuper];
     [plainContentView layoutFullInSuper];
+}
+-(void)setListFull{
+    [plainListView layoutFullInSuper];
+    [plainContentView layoutEqualSizeNextTo:plainListView];
+    
 }
 // 设定画面跳转关系
 - (void)configureAll{
@@ -66,11 +73,14 @@ const CGFloat listWidth = 370;
 -(void)selectedPlainUrl:(NSString *)url{
     if (!isOrientationIsLandscape()) {
         [self.view removeConstraints:self.view.constraints];
-        [self setContentFull];
+        [UIView animateWithDuration:1 animations:^{
+            [self setContentFull];
+        } completion:^(BOOL finished) {
+        }];
         isContentFull = YES;
     }
     [plainContentView reloadContent:url];
-
+    
 }
 -(void)orientationDidChange:(BOOL)isOrientationIsLandscape{
     [self.view removeConstraints:self.view.constraints];
@@ -82,9 +92,23 @@ const CGFloat listWidth = 370;
         if (isContentFull) {
             [self setContentFull];
         }else{
-            [plainListView layoutFullInSuper];
-            [plainContentView layoutEqualSizeNextTo:plainListView];
+            [self setListFull];
         }
+    }
+}
+/**
+ *  滑动手势 事件
+ *
+ *  @param gesture pan手势
+ */
+- (void)panHandle:(UIPanGestureRecognizer *)gesture
+{
+    if (!isOrientationIsLandscape()) {
+        [UIView animateWithDuration:1 animations:^{
+            [self.view removeConstraints:self.view.constraints];
+            [self setListFull];
+        } completion:^(BOOL finished) {
+        }];
     }
 }
 @end
