@@ -22,6 +22,7 @@ static inline bool isOrientationIsLandscape() {
 {
     MBProgressHUD *hud;
     UITapGestureRecognizer * tapRecognizer;
+    BOOL previousOritation;
 }
 
 @property (strong, nonatomic) UILabel * navigationBarTitle;

@@ -34,12 +34,12 @@
 
 -(void)layoutEqualSizeNextTo:(id)controller{
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    
+
     NSDictionary *dicBrentView = NSDictionaryOfVariableBindings(self , controller);
     NSString * KHConstraint;
     NSString * KVConstraint;
 
-    KVConstraint =[NSString stringWithFormat:@"V:|-[self(==controller)]-|"];
+    KVConstraint =[NSString stringWithFormat:@"V:|[self(==controller)]|"];
     KHConstraint = [NSString stringWithFormat:@"H:[controller]-[self(==controller)]"];
     
     NSMutableArray *constraintArray = [[NSMutableArray alloc]init];

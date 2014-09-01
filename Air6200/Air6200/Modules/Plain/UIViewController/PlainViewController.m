@@ -32,6 +32,7 @@ const CGFloat listWidth = 370;
     plainListView = [[PlainListView alloc]init];
     plainListView.delegate = self;
     [self.view addSubview:plainListView];
+    
     plainContentView = [[PlainContentView alloc]init];
     [self.view addSubview:plainContentView];
     [self setDefaultLayout];
@@ -39,6 +40,10 @@ const CGFloat listWidth = 370;
 -(void)setDefaultLayout{
     [plainListView layoutLeftInSuperwithSize:CGSizeMake(360, 0)];
     [plainContentView layoutHorizontalNextTo:plainListView];
+}
+-(void)setContentFull{
+    [plainListView layoutFullInSuper];
+    [plainContentView layoutFullInSuper];
 }
 // 设定画面跳转关系
 - (void)configureAll{
@@ -60,21 +65,26 @@ const CGFloat listWidth = 370;
 
 -(void)selectedPlainUrl:(NSString *)url{
     if (!isOrientationIsLandscape()) {
-
+        [self.view removeConstraints:self.view.constraints];
+        [self setContentFull];
+        isContentFull = YES;
     }
     [plainContentView reloadContent:url];
 
 }
 -(void)orientationDidChange:(BOOL)isOrientationIsLandscape{
+    [self.view removeConstraints:self.view.constraints];
     if (isOrientationIsLandscape) {
         NSLog(@"isOrientationIsLandscape");
-        [self.view removeConstraints:self.view.constraints];
         [self setDefaultLayout];
     }else{
-//        NSLog(@"not OrientationIsLandscape");
-//        [self.view removeConstraints:self.view.constraints];
-//        [plainListView layoutFullInSuper];
-//        [plainContentView layoutEqualSizeNextTo:plainListView];
+        NSLog(@"not OrientationIsLandscape");
+        if (isContentFull) {
+            [self setContentFull];
+        }else{
+            [plainListView layoutFullInSuper];
+            [plainContentView layoutEqualSizeNextTo:plainListView];
+        }
     }
 }
 @end

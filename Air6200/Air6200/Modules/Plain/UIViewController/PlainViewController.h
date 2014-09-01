@@ -13,6 +13,7 @@
 @interface PlainViewController : BaseViewController<PlainSelectedProtocol>{
     PlainListView *plainListView;
     PlainContentView *plainContentView;
+    BOOL isContentFull;
 }
 
 @end

@@ -79,6 +79,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self addKeyboardNotification];
+    previousOritation = isOrientationIsLandscape();
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
@@ -90,7 +91,10 @@
 }
 -(void)deviceOrientationDidChange:(NSNotification *) notification
 {
-    [self orientationDidChange:isOrientationIsLandscape()];
+    if(previousOritation != isOrientationIsLandscape()){
+        [self orientationDidChange:isOrientationIsLandscape()];
+        previousOritation = isOrientationIsLandscape();
+    }
 }
 -(void)orientationDidChange:(BOOL)isOrientationIsLandscape{
     

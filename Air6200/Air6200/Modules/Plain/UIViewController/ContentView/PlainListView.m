@@ -53,6 +53,7 @@
         [self.delegate selectedPlainUrl:path];
     }
 }
+
 -(void)showDefaultContent{
     if ([self.delegate respondsToSelector:@selector(selectedPlainUrl:)]) {
         [self.delegate selectedPlainUrl:[self.service defaultContentFile]];
