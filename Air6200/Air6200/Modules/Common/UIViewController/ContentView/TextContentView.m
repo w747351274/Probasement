@@ -28,7 +28,7 @@
     label.translatesAutoresizingMaskIntoConstraints = NO;
     
     viewsDictionary = NSDictionaryOfVariableBindings(scrollView, label);
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[scrollView]|" options:0 metrics: 0 views:viewsDictionary]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-3-[scrollView]-3-|" options:0 metrics: 0 views:viewsDictionary]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|" options:0 metrics: 0 views:viewsDictionary]];
     [scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[label(scrollView)]|" options:0 metrics: 0 views:viewsDictionary]];
     [scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[label]|" options:0 metrics: 0 views:viewsDictionary]];

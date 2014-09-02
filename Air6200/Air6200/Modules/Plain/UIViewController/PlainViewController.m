@@ -40,22 +40,24 @@ const CGFloat listWidth = 370;
     [self setDefaultLayout];
 }
 -(void)setDefaultLayout{
-    [plainListView layoutLeftInSuperwithSize:CGSizeMake(360, 0)];
+    [plainListView layoutLeftInSuperwithSize:CGSizeMake(listWidth, 0)];
     [plainContentView layoutHorizontalNextTo:plainListView];
 }
 -(void)setContentFull{
     [plainListView layoutFullInSuper];
     [plainContentView layoutFullInSuper];
+    isContentFull = YES;
 }
 -(void)setListFull{
     [plainListView layoutFullInSuper];
     [plainContentView layoutEqualSizeNextTo:plainListView];
-    
+    isContentFull = NO;
 }
 // 设定画面跳转关系
 - (void)configureAll{
     //默认页面
     [plainListView showDefaultContent];
+    isContentFull = NO;
 }
 
 - (void)viewDidLoad
@@ -77,7 +79,6 @@ const CGFloat listWidth = 370;
             [self setContentFull];
         } completion:^(BOOL finished) {
         }];
-        isContentFull = YES;
     }
     [plainContentView reloadContent:url];
     
@@ -103,54 +104,49 @@ const CGFloat listWidth = 370;
  */
 - (void)panHandle:(UIPanGestureRecognizer *)gesture
 {
-    AppDelegate *delegate =[UIApplication sharedApplication].delegate;
     if (!isOrientationIsLandscape()) {
         static float startPoint_X; //记录开始滑动时的 触控位置Y坐标
         float endPoint_X;   //记录结束滑动时的 触控位置Y坐标
-        static float viewPoint_X;  //记录开始滑动时的 视图位置Y坐标
-        
         switch (gesture.state)
         {
             case UIGestureRecognizerStateBegan:
             {
-                startPoint_X = [gesture locationInView:delegate.window].x;
-                
-                NSLog(@"\n\n========开始滑动");
-                NSLog(@"起始点的Y坐标为：%f",startPoint_X);
-                NSLog(@"视图的起始坐标为：%f",viewPoint_X);
+                startPoint_X = [gesture locationInView:self.view].x;
             }
                 break;
             case UIGestureRecognizerStateChanged:
             {
-                endPoint_X   = [gesture locationInView:delegate.window].x;
-                float gPoint = viewPoint_X + (endPoint_X - startPoint_X);
-                plainContentView.frame = CGRectMake(0, gPoint, 320, 568);// gPoint;
-                [gesture setTranslation:CGPointZero inView:delegate.window];
-                
-                NSLog(@"\n\n=========持续滑动");
-                NSLog(@"视图的坐标调整后为：%f",gPoint);
-                NSLog(@"滑动的的距离为： %f",endPoint_X - startPoint_X);
-                
+                endPoint_X   = [gesture locationInView:self.view].x;
+                float gPoint = (endPoint_X - startPoint_X);
+                [self.view removeConstraints:self.view.constraints];
+                [plainListView layoutFullInSuper];
+                if (gPoint >= 0) {
+                    [plainContentView layoutEqualSize:plainListView withXPoint:gPoint];
+                }else{
+                    [plainContentView layoutEqualSize:plainListView withXPoint:0];
+                }
+                [gesture setTranslation:CGPointZero inView:self.view];
+
             }
                 break;
             case UIGestureRecognizerStateEnded:
             {
-                NSLog(@"\n\n=========结束滑动");
-                
-                CGRect rect = plainContentView.frame;
-                
-                NSLog(@"view Y === %f",plainContentView.frame.origin.x);
+                endPoint_X   = [gesture locationInView:self.view].x;
+                float sizeX =  endPoint_X - startPoint_X;
+                [self.view removeConstraints:self.view.constraints];
+                if (sizeX >= 80) {
+                    [self setListFull];
+                    
+                }else{
+                    [self setContentFull];
+                }
                 
             }
                 break;
             case UIGestureRecognizerStateCancelled:
             {
-                NSLog(@"====oh NO===滑动被取消了");
-                
-                /*********************************************
-                 * 不排除有，pan事件被中断的可能，处理同stateEnded *
-                 *********************************************/
-                
+                [self.view removeConstraints:self.view.constraints];
+                [self setContentFull];
             }
                 break;
             default:

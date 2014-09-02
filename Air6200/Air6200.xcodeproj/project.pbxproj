@@ -282,8 +282,8 @@
 		BA55594C19A6DA610074092F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				BA25C1C619B4A08E00967DE9 /* Default-568h@2x.png */,
 				BA50B78B19B3362A00D8F8A2 /* setting@2x.png */,
+				BA25C1C619B4A08E00967DE9 /* Default-568h@2x.png */,
 				BA1C1E6819B06CCA00E018A3 /* lanch@2x.png */,
 				BA1C1E2719B0146A00E018A3 /* loding */,
 				BAF2B1AF19AD94F00095E804 /* 2-2.txt */,

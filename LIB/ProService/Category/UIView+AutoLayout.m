@@ -91,8 +91,15 @@
     [viewConstraintArray addObject:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.superview attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f]];
     [viewConstraintArray addObject:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.superview attribute:NSLayoutAttributeHeight multiplier:1.0f constant:0.0f]];
     [self.superview addConstraints:viewConstraintArray];
-    
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+//    
+//    NSMutableArray *constraintArray  = [[NSMutableArray alloc]init];
+//    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[self]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+//    
+//    [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[self]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
+//    [self.superview addConstraints:constraintArray];
 }
+
 -(void)layoutCenter{
     UIView *superview = self.superview;
 
@@ -187,7 +194,7 @@
     NSString * KVConstraint;
     
     
-    KHConstraint =@"H:[controller][self]-3-|";
+    KHConstraint =@"H:[controller][self]|";
     
     KVConstraint = [NSString stringWithFormat:@"V:|[self]|"];
     

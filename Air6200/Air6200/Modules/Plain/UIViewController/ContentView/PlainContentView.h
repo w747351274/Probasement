@@ -15,4 +15,5 @@
 @property(nonatomic,strong) UIView<ContentViewProtocal> *content;
 -(void)reloadContent:(NSString *)url;
 -(void)layoutEqualSizeNextTo:(id)controller;
+-(void)layoutEqualSize:(id)controller withXPoint:(CGFloat )x;
 @end

@@ -31,7 +31,6 @@
     NSURL *url = [NSURL fileURLWithPath:path];
     [self.content reloadViewWithURL:url];
 }
-
 -(void)layoutEqualSizeNextTo:(id)controller{
     self.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -47,7 +46,7 @@
     [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVConstraint options:0 metrics:nil views:dicBrentView]];
     [self.superview addConstraints:constraintArray];
 }
--(void)layoutEqualSizeNextTo:(id)controller withXPoint:(CGFloat )x{
+-(void)layoutEqualSize:(id)controller withXPoint:(CGFloat )x{
     self.translatesAutoresizingMaskIntoConstraints = NO;
     
     NSDictionary *dicBrentView = NSDictionaryOfVariableBindings(self , controller);
