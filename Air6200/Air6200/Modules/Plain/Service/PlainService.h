@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "PlainProtocol.h"
 
-@interface PlainService : NSObject<PlainProtocol>
+@interface PlainService : NSObject<PlainProtocol>{
+
+}
 -(NSArray *)plainDataSource;
 -(NSString *)dataFilePath:(NSString *)strFileName;
 -(NSString *)defaultContentFile;

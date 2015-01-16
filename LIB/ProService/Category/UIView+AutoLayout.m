@@ -228,6 +228,7 @@
     [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVConstraint options:0 metrics:nil views:dicBrentView]];
     [self.superview addConstraints:constraintArray];
 }
+
 -(void)layoutLeftInSuperwithSize:(CGSize )size{
     self.translatesAutoresizingMaskIntoConstraints = NO;
     NSString *KHConstraint;

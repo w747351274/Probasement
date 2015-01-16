@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ProService/BaseViewController.h>
 typedef int (^blk_t) (int);
 @interface BlockTestViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,UISearchBarDelegate>
 @end

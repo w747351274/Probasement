@@ -37,6 +37,10 @@
 		8BFC804718D685FC00551758 /* M3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC803918D685FC00551758 /* M3ViewController.m */; };
 		8BFC804818D685FC00551758 /* M3Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFC803C18D685FC00551758 /* M3Service.m */; };
 		BA2DFEB618A31EC600A92D5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA2DFEB818A31EC600A92D5C /* Localizable.strings */; };
+		BA38B0B819C9781100A50796 /* GTMBase64_zhg.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38B0B619C9781100A50796 /* GTMBase64_zhg.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BA38B0C019C978F500A50796 /* FileManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38B0BF19C978F500A50796 /* FileManageViewController.m */; };
+		BA38B0C319C97E6200A50796 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38B0C219C97E6200A50796 /* FileTools.m */; };
+		BA45FA4919C27ADE002663D9 /* ResourseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA45FA4819C27ADE002663D9 /* ResourseManager.m */; };
 		BA4BA5AA18A233FD0091C7BD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4BA5A918A233FD0091C7BD /* QuartzCore.framework */; };
 		BA4BA62F18A2581C0091C7BD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4BA62E18A2581C0091C7BD /* CFNetwork.framework */; };
 		BA4BA63118A2582E0091C7BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4BA63018A2582E0091C7BD /* Security.framework */; };
@@ -183,6 +187,15 @@
 		BA2DFEBA18A31F6A00A92D5C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA2DFEBB18A31F6A00A92D5C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA2DFEBC18A31F6A00A92D5C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA38B0B519C9781100A50796 /* GTMBase64_zhg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64_zhg.h; sourceTree = "<group>"; };
+		BA38B0B619C9781100A50796 /* GTMBase64_zhg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64_zhg.m; sourceTree = "<group>"; };
+		BA38B0B719C9781100A50796 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		BA38B0BE19C978F500A50796 /* FileManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManageViewController.h; sourceTree = "<group>"; };
+		BA38B0BF19C978F500A50796 /* FileManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManageViewController.m; sourceTree = "<group>"; };
+		BA38B0C119C97E6200A50796 /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
+		BA38B0C219C97E6200A50796 /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
+		BA45FA4719C27ADE002663D9 /* ResourseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourseManager.h; sourceTree = "<group>"; };
+		BA45FA4819C27ADE002663D9 /* ResourseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourseManager.m; sourceTree = "<group>"; };
 		BA4BA5A918A233FD0091C7BD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BA4BA62E18A2581C0091C7BD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BA4BA63018A2582E0091C7BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -293,6 +306,7 @@
 		8BFC801A18D685FC00551758 /* DemoModules */ = {
 			isa = PBXGroup;
 			children = (
+				BA38B0BD19C978CE00A50796 /* FileManage */,
 				8BE6D63918FCCB5A00BD031A /* DrawRect */,
 				8BFC801B18D685FC00551758 /* Block */,
 				8BFC801E18D685FC00551758 /* Gesture */,
@@ -401,6 +415,37 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		BA38B0B419C9781100A50796 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				BA38B0B519C9781100A50796 /* GTMBase64_zhg.h */,
+				BA38B0B619C9781100A50796 /* GTMBase64_zhg.m */,
+				BA38B0B719C9781100A50796 /* GTMDefines.h */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		BA38B0BD19C978CE00A50796 /* FileManage */ = {
+			isa = PBXGroup;
+			children = (
+				BA38B0C119C97E6200A50796 /* FileTools.h */,
+				BA38B0C219C97E6200A50796 /* FileTools.m */,
+				BA38B0BE19C978F500A50796 /* FileManageViewController.h */,
+				BA38B0BF19C978F500A50796 /* FileManageViewController.m */,
+			);
+			path = FileManage;
+			sourceTree = "<group>";
+		};
+		BA45FA4219C27A68002663D9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BA38B0B419C9781100A50796 /* GTMBase64 */,
+				BA45FA4719C27ADE002663D9 /* ResourseManager.h */,
+				BA45FA4819C27ADE002663D9 /* ResourseManager.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		BAD346211895427F00275582 = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +492,7 @@
 		BAD346331895427F00275582 /* Pro10788 */ = {
 			isa = PBXGroup;
 			children = (
+				BA45FA4219C27A68002663D9 /* Lib */,
 				8BFC801A18D685FC00551758 /* DemoModules */,
 				8BFC804918D68E9D00551758 /* Modules */,
 				BAD3463C1895427F00275582 /* AppDelegate.h */,
@@ -675,6 +721,7 @@
 				8BFC804618D685FC00551758 /* M2Service.m in Sources */,
 				8BFC804118D685FC00551758 /* ContactCoreDataStorage.m in Sources */,
 				8BFC804418D685FC00551758 /* M2SubViewController.m in Sources */,
+				BA38B0B819C9781100A50796 /* GTMBase64_zhg.m in Sources */,
 				8BFC803D18D685FC00551758 /* BlockTestViewController.m in Sources */,
 				BAD3463E1895427F00275582 /* AppDelegate.m in Sources */,
 				8B3FBDD618FE2C85001A3F7C /* DrawCureView.m in Sources */,
@@ -690,13 +737,16 @@
 				8BFC804218D685FC00551758 /* ContactCoreDataStorageObject.m in Sources */,
 				8BFC804318D685FC00551758 /* M1ViewController.m in Sources */,
 				BAD3463A1895427F00275582 /* main.m in Sources */,
+				BA38B0C319C97E6200A50796 /* FileTools.m in Sources */,
 				8B035034191871F300A1DC17 /* BackButton.m in Sources */,
 				8BFC804718D685FC00551758 /* M3ViewController.m in Sources */,
 				8B59E662192312F400AF7AE4 /* TreeNodeCoreDataStorage.m in Sources */,
 				8BFC804518D685FC00551758 /* M2ViewController.m in Sources */,
+				BA38B0C019C978F500A50796 /* FileManageViewController.m in Sources */,
 				8BFC804018D685FC00551758 /* Contact.xcdatamodeld in Sources */,
 				8B3FBDD318FE27A3001A3F7C /* BubbleView.m in Sources */,
 				8BE6D64018FCCC0200BD031A /* DrawTestView.m in Sources */,
+				BA45FA4919C27ADE002663D9 /* ResourseManager.m in Sources */,
 				8B0514891907B14F00F64517 /* BerzierTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

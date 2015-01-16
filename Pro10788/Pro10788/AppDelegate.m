@@ -14,7 +14,7 @@
 #import "BlockTestViewController.h"
 #import "DrawViewController.h"
 #import <ProService/UncaughtExceptionHandler.h>
-
+#import "FileManageViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -30,6 +30,8 @@
     GestureTest *gv = [[GestureTest alloc]init];
     BlockTestViewController *bv = [[BlockTestViewController alloc]init];
     DrawViewController *drawController = [[DrawViewController alloc]init];
+    FileManageViewController *fileManageViewController = [[FileManageViewController alloc]init];
+    
     UINavigationController *n1 = [[UINavigationController alloc]initWithRootViewController:m1];
     n1.navigationBar.translucent = NO;
     UINavigationController *n2 = [[UINavigationController alloc]initWithRootViewController:m2];
@@ -42,8 +44,10 @@
     nv.navigationBar.translucent = NO;
     UINavigationController *nd = [[UINavigationController alloc]initWithRootViewController:drawController];
     nd.navigationBar.translucent = NO;
+    UINavigationController *nf = [[UINavigationController alloc]initWithRootViewController:fileManageViewController];
+    nf.navigationBar.translucent = NO;
     
-    NSArray * arrController = @[nd,n2,n3,ng,nv,n1];
+    NSArray * arrController = @[nd,n2,n3,ng,nv,n1,nf];
     NSArray *arrTitleImageArray = @[TabItem(@"draw", UIResourceBundleImage(@"conversation_press"),UIResourceBundleImage(@"conversation")),
                                    TabItem(@"MM2", UIResourceBundleImage(@"setting_press"),
                                            UIResourceBundleImage(@"setting")),
@@ -54,11 +58,13 @@
                                    TabItem(@"Block", UIResourceBundleImage(@"trends_press"),
                                            UIResourceBundleImage(@"trends")),
                                    TabItem(@"MM1", UIResourceBundleImage(@"trends_press"),
-                                           UIResourceBundleImage(@"trends"))];
+                                           UIResourceBundleImage(@"trends")),
+                                    TabItem(@"MM1", UIResourceBundleImage(@"trends_press"),
+                                            UIResourceBundleImage(@"trends"))];
     
     self.tab = [UITabBarController customTabBarWithControllerArrary:arrController
                                                 AndTitleImagesArray:arrTitleImageArray];
-    [self.tab setSelectedIndex:3];
+    [self.tab setSelectedIndex:[arrController count]-1];
     self.window.rootViewController = self.tab;
     
     [self.window makeKeyAndVisible];

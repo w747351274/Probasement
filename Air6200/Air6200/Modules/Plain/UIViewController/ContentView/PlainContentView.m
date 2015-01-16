@@ -18,10 +18,11 @@
     }
     return self;
 }
+
 -(void)initViews{
     [super initViews];
-
     self.content = [[TextContentView alloc]init];
+    
     [self addSubview:self.content];
     [self.content layoutFullInSuper];
 };
@@ -31,6 +32,7 @@
     NSURL *url = [NSURL fileURLWithPath:path];
     [self.content reloadViewWithURL:url];
 }
+
 -(void)layoutEqualSizeNextTo:(id)controller{
     self.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -45,7 +47,9 @@
     [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KHConstraint options:0 metrics:nil views:dicBrentView]];
     [constraintArray addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:KVConstraint options:0 metrics:nil views:dicBrentView]];
     [self.superview addConstraints:constraintArray];
+
 }
+
 -(void)layoutEqualSize:(id)controller withXPoint:(CGFloat )x{
     self.translatesAutoresizingMaskIntoConstraints = NO;
     

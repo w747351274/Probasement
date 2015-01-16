@@ -42,7 +42,7 @@
     [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(stopAnimation) userInfo:nil repeats:YES];
     
     ShapeView *shape = [[ShapeView alloc]initWithFrame:CGRectMake(10+60, 10, 170, 200)];
- 
+
     [self.view addSubview:shape];
     UIImageView *imgView = [[UIImageView alloc]init];
     [imgView setFrame:CGRectMake(0, 0, 100, 100)];

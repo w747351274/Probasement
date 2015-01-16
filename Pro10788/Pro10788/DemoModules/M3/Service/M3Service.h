@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 江磊. All rights reserved.
 //
 
-
-@protocol m3Protocal <BaseProtocal>
+#import <ProService/BaseProtocal.h>
+#import <ProService/BaseService.h>
+@protocol m3Protocal <BaseProtocol>
 
 -(void)haveFun;
 -(void)dataReceived:(NSDictionary *)dict;

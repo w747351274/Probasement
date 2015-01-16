@@ -8,7 +8,7 @@
 
 #import "M2ViewController.h"
 #import "M2ViewProtocal.h"
-
+#import <ProService/BaseService.h>
 @interface M2Service : BaseService<M2ViewProtocal>{
     
 }

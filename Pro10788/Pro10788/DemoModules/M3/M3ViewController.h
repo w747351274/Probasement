@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "M3Service.h"
+#import <ProService/BaseViewController.h>
 
 @interface M3ViewController : BaseViewController<m3Protocal>{
 

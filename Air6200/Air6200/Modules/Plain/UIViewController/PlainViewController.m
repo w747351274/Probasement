@@ -39,6 +39,7 @@ const CGFloat listWidth = 370;
     [self.view addSubview:plainContentView];
     [self setDefaultLayout];
 }
+
 -(void)setDefaultLayout{
     [plainListView layoutLeftInSuperwithSize:CGSizeMake(listWidth, 0)];
     [plainContentView layoutHorizontalNextTo:plainListView];

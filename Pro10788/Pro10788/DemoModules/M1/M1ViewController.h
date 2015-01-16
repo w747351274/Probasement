@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ContactCoreDataStorage.h"
+#import <ProService/BaseViewController.h>
+
 @interface M1ViewController : BaseViewController{
     UITextField *textFieldName;
     UITextField *textFieldEmail;

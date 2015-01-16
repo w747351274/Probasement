@@ -17,4 +17,5 @@
     #import <ProService/Category.h>
     #import <ProService/ProHeader.h>
     #import <ProService/Utility.h>
+    #import "ResourseManager.h"
 #endif

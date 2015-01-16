@@ -14,8 +14,9 @@
 -(void)selectedPlainUrl:(NSString *)url;
 @end
 
-@interface PlainListView : BaseView<UITableViewDataSource,UITableViewDelegate>{
+@interface PlainListView : BaseView<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>{
     UITableView *tableViewMain;
+    UIView * viewShadow;
 }
 @property(nonatomic, strong)id<PlainProtocol> service;
 @property(nonatomic, weak)  id<PlainSelectedProtocol> delegate;

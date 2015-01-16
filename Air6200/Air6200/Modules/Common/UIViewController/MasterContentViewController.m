@@ -55,7 +55,6 @@ const CGFloat menuWidth = 60;
     contentView = controller.view;
     [self.view addSubview:contentView];
     [contentView layoutHorizontalNextTo:menuView ofSize:CGSizeZero];
-
 }
 
 - (void)viewDidLoad

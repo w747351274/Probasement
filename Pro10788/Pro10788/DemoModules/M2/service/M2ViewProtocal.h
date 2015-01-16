@@ -8,7 +8,8 @@
 //  interface of the Module2
 
 #import <Foundation/Foundation.h>
-@protocol M2ViewProtocal <BaseProtocal>
+
+@protocol M2ViewProtocal <NSObject>
 
 @required
 -(NSArray *)m2DataSource;

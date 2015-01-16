@@ -146,6 +146,10 @@
     
     cell.textLabel.text =[NSString stringWithFormat:@"%@--%@", obj.email,obj.age];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"-%@",obj.name];
+    UIButton *button = [UIButton buttonWithStr:@"change"];
+    
+    [button sizeToFit];
+    cell.accessoryView = button;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

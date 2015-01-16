@@ -69,8 +69,6 @@
 
 -(void)actionBtn:(UIButton *)btn{
     NSLog(@"request begin");
-    
-    
     [HttpUtil requestWithUrl:@"http://allseeing-i.com/ASIHTTPRequest/tests/images/large-image.jpg" withCompleteBlock:^(NSDictionary *dict) {
         NSLog(@"dict->%@",dict);
     } errorBlock:^(NSError *error) {

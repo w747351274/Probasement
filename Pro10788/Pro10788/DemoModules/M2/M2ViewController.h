@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <ProService/MJRefresh.h>
 #import <CoreData/NSFetchedResultsController.h>
-
+#import <ProService/BaseViewController.h>
 @interface M2ViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,MJRefreshBaseViewDelegate,NSFetchedResultsControllerDelegate>{
     MJRefreshHeaderView *_header;
     NSMutableArray *arrDataSource;

@@ -29,6 +29,12 @@
     [self addSubview:tableViewMain];
     [tableViewMain layoutFullInSuper];
     self.service = [[PlainService alloc]init];
+    
+    UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), 44)];
+    searchBar.placeholder = @"検索";
+    searchBar.delegate = self;
+    tableViewMain.tableHeaderView = searchBar;
+    
 };
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -59,4 +65,39 @@
         [self.delegate selectedPlainUrl:[self.service defaultContentFile]];
     }
 }
+- (void)addShadowToTable{
+    if (!viewShadow) {
+        viewShadow = [[UIView alloc]initWithFrame:CGRectMake(0, 44, CGRectGetWidth(tableViewMain.frame), CGRectGetHeight(tableViewMain.frame) -44)];
+    }
+    tableViewMain.bounces = NO;
+    [viewShadow setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
+    [tableViewMain addSubview:viewShadow];
+
+}
+-(void)removeShadowToTable{
+    if (viewShadow) {
+        [viewShadow removeFromSuperview];
+        tableViewMain.bounces = YES;
+        viewShadow = nil;
+    }
+}
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    searchBar.showsCancelButton = YES;
+    [self addShadowToTable];
+    return YES;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    searchBar.showsCancelButton = NO;
+    [self removeShadowToTable];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if([searchText isEqualToString:@""]){
+        [self addShadowToTable];
+    }else{
+        [self removeShadowToTable];
+    }
+}
+
 @end
